@@ -29,7 +29,7 @@ export default function Navbar() {
                         <div className="relative flex items-center justify-between h-16">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-green-700 focus:outline-none">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -45,31 +45,31 @@ export default function Navbar() {
                                         src="/favicon.ico"
                                         alt="travel cruise"
                                     />
-                                    <h1 className="font-bold text-green-800">
+                                    <h1 className="font-bold text-xl text-green-800">
                                         Travel Cruise</h1>
                                 </div>
-                                <div className="hidden sm:block sm:ml-6">
+                                <div className="hidden items-center sm:flex sm:ml-6">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
-                                            <a
+                                            <NavLink
                                                 key={item.name}
-                                                href={item.href}
-                                                className={classNames('text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm'
-                                                )}
+                                                to={item.href}
+                                                activeClassName='text-green-600 font-bold'
+                                                className={classNames('text-black hover:bg-green-100 md:px-3 pt-1 rounded-md text-base')}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
                                                 {item.name}
-                                            </a>
+                                            </NavLink>
                                         ))}
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                            <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 {!user ?
                                     <button>
                                         <NavLink
                                             to="/login"
-                                            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-1 md:text-lg md:px-4"
+                                            className="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-1 md:text-lg md:px-8 md:py-3"
                                         >
                                             Login
                                         </NavLink>
@@ -137,14 +137,14 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="sm:hidden">
+                    <Disclosure.Panel className="sm:hidden bg-white">
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {navigation.map((item) => (
                                 <Disclosure.Button
                                     key={item.name}
                                     as="a"
                                     href={item.href}
-                                    className={classNames('text-gray-300 hover:bg-gray-200 hover:text-blackblock px-3 py-2 rounded-md text-base'
+                                    className={classNames('text-black hover:bg-green-100 block px-3 py-2 rounded-md text-base'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}
                                 >
