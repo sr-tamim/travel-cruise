@@ -2,8 +2,12 @@ import React, { useContext } from 'react';
 import { UserContext } from '../../contexts/UserContext';
 import { UserIcon } from '@heroicons/react/outline';
 
+const buttonStyle = {
+    background: 'linear-gradient(to right, #1B77BA, #8BC547)'
+}
+
 const Profile = () => {
-    const { user } = useContext(UserContext);
+    const { user, logOut } = useContext(UserContext);
     return (
         <section className="flex flex-col items-center">
             <div className="my-4 w-36 h-36 md:h-56 md:w-56
@@ -18,6 +22,10 @@ const Profile = () => {
             </div>
             <h2 className="text-xl font-bold md:text-3xl text-green-600">{user.displayName}</h2>
             <h4 className="text-sm md:text-xl">{user.email}</h4>
+            <div className="my-6">
+                <button onClick={logOut} className="text-white text-lg font-bold py-2 px-6 rounded-lg shadow-lg hover:shadow-xl"
+                    style={buttonStyle}>Sign Out</button>
+            </div>
         </section>
     );
 };
