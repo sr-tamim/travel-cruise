@@ -1,0 +1,9 @@
+nav{
+    background: transparent;
+    padding: 15px 5px;
+    transition: background 1s, padding 800ms;
+}
+nav.scrolling{
+    background: white;
+    padding: 5px 5px;
+}
