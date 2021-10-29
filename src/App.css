@@ -4,5 +4,8 @@
 }
 
 section {
-    padding: 100px 0 50px;
+    padding: 60px 0 50px;
+}
+@media screen and (min-width: 768px) {
+    section{ padding: 100px 0 50px }
 }
