@@ -11,7 +11,6 @@ const useFirebase = () => {
     const [user, setUser] = useState(null);
     const [userLoading, setUserLoading] = useState(true);
     const [usrError, setUsrError] = useState(null);
-    console.log(user);
 
     onAuthStateChanged(auth, usr => {
         usr ? setUser(usr) : user && setUser(null);

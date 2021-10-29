@@ -81,7 +81,7 @@ const Footer = () => {
                     </div>
 
                     <div class="sm:flex sm:flex-wrap sm:-mx-4 pt-6 border-t">
-                        <div class="sm:w-full px-4 md:w-2/4">
+                        <div class="sm:w-full px-4 md:w-1/4">
                             <h6 class="font-bold mb-2">Stay connected</h6>
                             <div class="flex">
                                 <a href="/" class="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200">
@@ -103,9 +103,24 @@ const Footer = () => {
                             </address>
                         </div>
                         <div class="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0">
-                            <h6 class="font-bold mb-2">Free Resources</h6>
-                            <p class="mb-4 text-sm">Use our HTML blocks for <strong>FREE</strong>.<br />
-                                <em>All are MIT License</em></p>
+                            <h6 class="font-bold mb-2">For Operators</h6>
+                            <a href="/" class="mb-4 text-sm">
+                                Admin Page
+                            </a>
+                            <br />
+                            <a href="/" class="mb-4 text-sm">
+                                Moderator Page
+                            </a>
+                        </div>
+                        <div className="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0">
+                            <h6 class="font-bold mb-2">Copyright</h6>
+                            <p className="text-sm"
+                            >2021 &copy; All rights reserved <br />
+                                by <a href="https://twitter.com/TaMiM__tamim"
+                                    className="font-bold text-blue-700"
+                                    target="_blank" rel="noreferrer">
+                                    SR TAMIM</a>
+                            </p>
                         </div>
                     </div>
                 </div>
