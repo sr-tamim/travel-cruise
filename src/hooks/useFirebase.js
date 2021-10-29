@@ -24,7 +24,7 @@ const useFirebase = () => {
     const googleLogin = () => signInGoogle(auth).catch(err => setUsrError(err));
 
     return {
-        user, setUser,
+        user, setUser, userLoading,
         usrError, setUsrError,
         logOut, googleLogin
     }
