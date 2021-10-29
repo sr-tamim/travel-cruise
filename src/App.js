@@ -1,4 +1,5 @@
 import './App.css';
+import HomePage from './components/HomePage/HomePage';
 import useFirebase from './useFirebase';
 
 
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-sm">Travel Cruise</h1>
+      <HomePage />
     </div>
   );
 }
