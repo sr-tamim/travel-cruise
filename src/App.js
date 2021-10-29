@@ -1,5 +1,6 @@
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
+import Navbar from './components/Shared/Navbar/Navbar';
 import useFirebase from './useFirebase';
 
 
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <HomePage />
     </div>
   );
