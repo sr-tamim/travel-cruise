@@ -7,10 +7,10 @@ import { NavLink } from 'react-router-dom'
 import navBackChange from "../../../utilities/navBackChange";
 
 const navigation = [
-    { name: 'Dashboard', href: '/home', current: false },
+    { name: 'Home', href: '/home', current: false },
     { name: 'Team', href: '/home', current: true },
     { name: 'Projects', href: '/home', current: false },
-    { name: 'Calendar', href: '/home', current: false },
+    { name: 'Contact', href: '/contact', current: false },
 ]
 
 function classNames(...classes) {
