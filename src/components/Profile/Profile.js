@@ -6,13 +6,14 @@ const Profile = () => {
     const { user } = useContext(UserContext);
     return (
         <section className="flex flex-col items-center">
-            <div className="my-4">
+            <div className="my-4 w-36 h-36 md:h-56 md:w-56
+            bg-gray-500 rounded-full overflow-hidden">
                 {user.photoURL ?
                     <img
-                        className="w-36 h-36 md:h-56 md:w-56 rounded-full"
+                        className="w-full h-full"
                         src={user.photoURL}
                         alt="user"
-                    /> : <UserIcon className="block h-7 w-7 text-white p-1" aria-hidden="true" />
+                    /> : <UserIcon className="block h-full w-full text-white p-6" aria-hidden="true" />
                 }
             </div>
             <h2 className="text-xl font-bold md:text-3xl text-green-600">{user.displayName}</h2>
