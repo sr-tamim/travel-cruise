@@ -8,6 +8,7 @@ import Profile from './components/Profile/Profile';
 import Footer from './components/Shared/Footer/Footer';
 import Loading from './components/Shared/Loading/Loading';
 import Navbar from './components/Shared/Navbar/Navbar';
+import PlacesContextProvider from './contexts/PlacesContext';
 import UserContextProvider from './contexts/UserContext';
 import useFirebase from './hooks/useFirebase';
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserContextProvider>
+      <PlacesContextProvider><UserContextProvider>
         {userLoading ? <Loading /> :
           <>
             <Router>
@@ -26,14 +27,14 @@ function App() {
                 <Route path="/home"><HomePage /></Route>
                 <Route exact path="/"><HomePage /></Route>
                 <Route path="/login"><Login /></Route>
-                <Route path="/places/:placeID"><PlaceDetails /></Route>
+                <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
                 <PrivateRoute path="/profile"><Profile /></PrivateRoute>
               </Switch>
               <Footer />
             </Router>
           </>
         }
-      </UserContextProvider>
+      </UserContextProvider></PlacesContextProvider>
     </div>
   );
 }

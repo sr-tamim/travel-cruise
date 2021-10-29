@@ -34,8 +34,7 @@ const Place = ({ place }) => {
                         {shortDescription}</p>
                     <NavLink to={`/places/${placeID}`}>
                         <button className="w-full text-white text-lg font-bold py-2"
-                            style={buttonStyle}>
-                            Book Now</button>
+                            style={buttonStyle}>See Details</button>
                     </NavLink>
                 </div>
             </div>
