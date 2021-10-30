@@ -1,7 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { CheckIcon, ClockIcon } from '@heroicons/react/outline';
+import { BookingsContext } from '../../../../contexts/BookingsContext';
 
 const buttonStyle = {
     background: 'linear-gradient(to right, #1B77BA, #8BC547)'
@@ -15,6 +16,9 @@ const PlaceDetails = () => {
             .then(({ data }) => setPlaceDetails(data))
             .catch(console.dir)
     }, [placeID])
+
+    const { addToCart } = useContext(BookingsContext);
+
     return (
         placeDetails &&
         <section>
@@ -32,13 +36,13 @@ const PlaceDetails = () => {
                         </small>
                     </h1>
                     <div className="flex flex-wrap my-2 px-1 text-gray-500">
-                        <span className="mr-3"><strong>Country: </strong>
+                        <span className="mr-4"><strong>Country: </strong>
                             {placeDetails.country}</span>
-                        <span className="mr-3"><strong>Capital: </strong>
+                        <span className="mr-4"><strong>Capital: </strong>
                             {placeDetails.capitalCity}</span>
-                        <span className="mr-3"><strong>Currency: </strong>
+                        <span className="mr-4"><strong>Currency: </strong>
                             {placeDetails.currency}</span>
-                        <span className="mr-3"><strong>Languages: </strong>
+                        <span className="mr-4"><strong>Languages: </strong>
                             {placeDetails.languages.join(', ')}</span>
                     </div>
                     <p className="max-w-4xl text-justify text-gray-600 my-6 px-2">{placeDetails.description}</p>
@@ -46,7 +50,8 @@ const PlaceDetails = () => {
                 <div className="flex flex-col-reverse my-6 lg:flex-col lg:px-12">
                     <div className="my-6">
                         <button className="w-full text-white text-lg font-bold py-2"
-                            style={buttonStyle}>Book Now</button>
+                            style={buttonStyle} onClick={() => addToCart(placeDetails)}
+                        >Book Now</button>
                     </div>
                     <div className="text-5xl font-extrabold text-green-600 text-center">
                         ${placeDetails.cost}

@@ -11,7 +11,7 @@ const navigation = [
     { name: 'Contact', href: '/contact' },
 ]
 const adminActions = [
-    { name: 'Manage Orders', href: '/manage/orders' },
+    { name: 'Manage Bookings', href: '/manage/orders' },
     { name: 'Add Places', href: '/places/add' }
 ]
 
@@ -153,7 +153,7 @@ export default function Navbar() {
                                                         {({ active }) => (
                                                             <NavLink to="/profile"
                                                                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
-                                                                Your Profile
+                                                                Profile
                                                             </NavLink>
                                                         )}
                                                     </Menu.Item>
