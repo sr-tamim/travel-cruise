@@ -52,7 +52,8 @@ export default function useBookings() {
     // remove one booking
     const removeItem = (place) => {
         const newCart = [...cart];
-        newCart.splice(newCart.indexOf(place), 1);
+        newCart.filter(p => p.placeID === place.placeID).length > 1 &&
+            newCart.splice(newCart.indexOf(place), 1);
         updateCart(newCart);
     }
 

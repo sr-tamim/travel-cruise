@@ -26,6 +26,7 @@ const MyBookings = () => {
                                 <div className="flex flex-col justify-between px-4 py-2 sm:py-0">
                                     <h2 className="text-2xl font-bold text-green-600">{place.placeName}</h2>
                                     <h6 className="my-2">{place.duration} days trip</h6>
+
                                     <h6 className="flex items-center"
                                     >Quantity:
                                         <MinusIcon
@@ -38,6 +39,7 @@ const MyBookings = () => {
                                             className="inline h-6 w-6 text-white bg-green-500 p-1 mx-2 cursor-pointer
                                             shadow-md rounded" aria-hidden="true" />
                                     </h6>
+
                                     <div className="my-2 text-white text-sm">
                                         <NavLink to={`/places/${place.placeID}`}>
                                             <button className="bg-green-600 rounded px-4 py-2 mr-4">See Details</button>
