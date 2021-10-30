@@ -10,6 +10,10 @@ const Login = () => {
     user && history.push(backToPrevious);
     return (
         <section className="flex justify-center flex-col">
+            {backToPrevious !== '/profile' &&
+                <h6 className="text-sm text-center font-bold text-red-500 my-8"
+                >You've to Login First to Visit {backToPrevious.slice(1, backToPrevious.length).toUpperCase()} Page</h6>
+            }
             <h1 className="text-3xl lg:text-5xl font-bold text-center">Sign In</h1>
             <div className="flex justify-center my-12">
                 <button onClick={googleLogin}

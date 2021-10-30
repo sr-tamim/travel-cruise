@@ -4,6 +4,7 @@ import './App.css';
 import AddTour from './components/AddTour/AddTour';
 import Login from './components/AuthenticationPages/Login/Login';
 import ConfirmBooking from './components/ConfirmBooking/ConfirmBooking';
+import ContactPage from './components/ContactPage/ContactPage';
 import HomePage from './components/HomePage/HomePage';
 import PlaceDetails from './components/HomePage/Places/PlaceDetails/PlaceDetails';
 import DetailedBooking from './components/ManageBookings/DetailedBooking/DetailedBooking';
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/home"><HomePage /></Route>
                 <Route exact path="/"><HomePage /></Route>
                 <Route path="/login"><Login /></Route>
+                <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
                 <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
                 <PrivateRoute path="/profile"><Profile /></PrivateRoute>
                 <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
