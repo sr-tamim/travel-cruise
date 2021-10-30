@@ -4,6 +4,7 @@ import './App.css';
 import Login from './components/AuthenticationPages/Login/Login';
 import HomePage from './components/HomePage/HomePage';
 import PlaceDetails from './components/HomePage/Places/PlaceDetails/PlaceDetails';
+import ManageBookings from './components/ManageBookings/ManageBookings';
 import MyBookings from './components/MyBookings/MyBookings';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Profile from './components/Profile/Profile';
@@ -32,6 +33,7 @@ function App() {
                 <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
                 <PrivateRoute path="/profile"><Profile /></PrivateRoute>
                 <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
+                <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
               </Switch>
               <Footer />
             </Router>
