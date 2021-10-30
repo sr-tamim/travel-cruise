@@ -1,11 +1,10 @@
 nav{
-    background: transparent;
+    background: white;
     padding: 10px 5px;
-    transform: scaleY(1.05);
-    transition: background 1s, transform 600ms;
+    transform: scaleY(1.08);
+    transition: transform 600ms;
     transform-origin: top;
 }
 nav.scrolling{
-    background: white;
-    transform: scaleY(0.95);
+    transform: scaleY(0.92);
 }

@@ -1,7 +1,7 @@
 
 const navBackChange = () => {
     window.addEventListener('scroll', () => {
-        (window.scrollY) > 80 ?
+        (window.scrollY) > 50 ?
             document.querySelector('nav').classList.add('scrolling')
             : document.querySelector('nav').classList.remove('scrolling');
     })
