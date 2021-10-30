@@ -5,7 +5,7 @@ import { ChevronDownIcon, MenuIcon, UserIcon, XIcon } from '@heroicons/react/out
 import { UserContext } from '../../../contexts/UserContext';
 import { NavLink } from 'react-router-dom';
 import navBackChange from "../../../utilities/navBackChange";
-import { BookingsContext } from "../../../contexts/BookingsContext";
+import { CartContext } from "../../../contexts/CartContext";
 
 const navigation = [
     { name: 'Home', href: '/home' },
@@ -13,7 +13,7 @@ const navigation = [
 ]
 const adminActions = [
     { name: 'Manage Bookings', href: '/manage/bookings' },
-    { name: 'Add Places', href: '/places/add' }
+    { name: 'Add Tour', href: '/addtour' }
 ]
 
 function classNames(...classes) {
@@ -24,7 +24,7 @@ window.addEventListener('scroll', navBackChange);
 
 export default function Navbar() {
     const { user, logOut } = useContext(UserContext);
-    const { cart } = useContext(BookingsContext);
+    const { cart } = useContext(CartContext);
 
     return (
         <Disclosure as="nav" className="fixed top-0 z-50 w-full">

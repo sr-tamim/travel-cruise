@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { CheckIcon, ClockIcon } from '@heroicons/react/outline';
-import { BookingsContext } from '../../../../contexts/BookingsContext';
+import { CartContext } from '../../../../contexts/CartContext';
 
 const buttonStyle = {
     background: 'linear-gradient(to right, #1B77BA, #8BC547)'
@@ -17,7 +17,7 @@ const PlaceDetails = () => {
             .catch(console.dir)
     }, [placeID])
 
-    const { addToCart } = useContext(BookingsContext);
+    const { addToCart } = useContext(CartContext);
 
     return (
         placeDetails &&
@@ -49,7 +49,7 @@ const PlaceDetails = () => {
                 </div>
                 <div className="flex flex-col-reverse my-6 lg:flex-col lg:px-12">
                     <div className="my-6">
-                        <button className="w-full text-white text-lg font-bold py-2"
+                        <button className="w-full text-white text-lg font-bold px-8 py-2 rounded-md"
                             style={buttonStyle} onClick={() => addToCart(placeDetails)}
                         >Book Now</button>
                     </div>

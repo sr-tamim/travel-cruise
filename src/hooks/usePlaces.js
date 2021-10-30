@@ -8,8 +8,15 @@ const usePlaces = () => {
             .then(({ data }) => setPlaces(data))
             .catch(console.dir);
     }, [])
+
+    const addTourPlace = (placeInfo) => {
+        const newPlace = { ...placeInfo, placeID: places.length + 1 }
+        axios.post('http://localhost:5000/places', newPlace)
+            .then(() => alert('Tour Added Successfully'))
+            .catch(console.dir);
+    }
     return ({
-        places, setPlaces
+        places, setPlaces, addTourPlace
     });
 };
 
