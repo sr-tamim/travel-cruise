@@ -12,7 +12,7 @@ const navigation = [
     { name: 'Contact', href: '/contact' },
 ]
 const adminActions = [
-    { name: 'Manage Bookings', href: '/manage/orders' },
+    { name: 'Manage Bookings', href: '/manage/bookings' },
     { name: 'Add Places', href: '/places/add' }
 ]
 
@@ -98,15 +98,15 @@ export default function Navbar() {
                                                             <div className="rounded-lg shadow-lg overflow-hidden">
                                                                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                                                     {adminActions.map((item) => (
-                                                                        <a
+                                                                        <NavLink
                                                                             key={item.name}
-                                                                            href={item.href}
+                                                                            to={item.href}
                                                                             className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                                                         >
                                                                             <div className="ml-4">
                                                                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                                                                             </div>
-                                                                        </a>
+                                                                        </NavLink>
                                                                     ))}
                                                                 </div>
                                                             </div>
@@ -237,15 +237,15 @@ export default function Navbar() {
                                                 <div className="rounded-lg shadow-lg overflow-hidden">
                                                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                                         {adminActions.map((item) => (
-                                                            <a
+                                                            <NavLink
                                                                 key={item.name}
-                                                                href={item.href}
+                                                                to={item.href}
                                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                                             >
-                                                                <div className="ml-4">
+                                                                <Disclosure.Button className="ml-4">
                                                                     <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                                                </div>
-                                                            </a>
+                                                                </Disclosure.Button>
+                                                            </NavLink>
                                                         ))}
                                                     </div>
                                                 </div>
