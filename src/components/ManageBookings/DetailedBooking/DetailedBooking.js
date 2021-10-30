@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { BookingsContext } from '../../../contexts/BookingsContext';
 import Bookings from '../../Bookings/Bookings';
 
-const DetailedBooking = ({ places }) => {
+const DetailedBooking = () => {
     const { id } = useParams();
     const { singleBookingDetails } = useContext(BookingsContext);
     const [bookingDetails, setBookingDetails] = useState(null);

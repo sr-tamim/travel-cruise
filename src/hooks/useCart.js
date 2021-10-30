@@ -12,7 +12,7 @@ export default function useCart() {
         else {
             const savedDB = JSON.parse(dbJSON);
             const productIDs = Object.keys(savedDB).map(id => parseInt(id));
-            const result = await axios.post('http://localhost:5000/placesByID', productIDs);
+            const result = await axios.post('https://travel-cruise-srt-server.herokuapp.com/placesByID', productIDs);
             const { data } = result;
             // add products depending on the number of savedDB
             const cartItems = [];

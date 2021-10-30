@@ -12,7 +12,7 @@ const PlaceDetails = () => {
     const { placeID } = useParams();
     const [placeDetails, setPlaceDetails] = useState(null);
     useEffect(() => {
-        axios.get(`http://localhost:5000/place/${placeID}`)
+        axios.get(`https://travel-cruise-srt-server.herokuapp.com/place/${placeID}`)
             .then(({ data }) => setPlaceDetails(data))
             .catch(console.dir)
     }, [placeID])

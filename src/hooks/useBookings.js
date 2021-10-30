@@ -7,32 +7,32 @@ export default function useBookings() {
 
     const [allBookings, setAllBookings] = useState(null);
     function getAllBookings() {
-        axios.get(`http://localhost:5000/bookings`)
+        axios.get(`https://travel-cruise-srt-server.herokuapp.com/bookings`)
             .then(({ data }) => setAllBookings(data))
             .catch(console.dir);
     }
     useEffect(getAllBookings, []);
 
     function addBooking(bookingInfo) {
-        axios.post('http://localhost:5000/bookings', bookingInfo)
+        axios.post('https://travel-cruise-srt-server.herokuapp.com/bookings', bookingInfo)
             .then(history.push('/'))
             .catch(console.dir);
     }
 
     function deleteBooking(id) {
-        axios.delete(`http://localhost:5000/bookings/${id}`)
+        axios.delete(`https://travel-cruise-srt-server.herokuapp.com/bookings/${id}`)
             .then(({ data }) => data.deletedCount === 1 && getAllBookings())
             .catch(console.dir);
     }
 
     function setStatus(status, id) {
-        axios.post(`http://localhost:5000/booking/update/${id}`, { status })
+        axios.post(`https://travel-cruise-srt-server.herokuapp.com/booking/update/${id}`, { status })
             .then(({ data }) => data.modifiedCount === 1 && getAllBookings())
             .catch(console.dir);
     }
 
     function singleBookingDetails(id) {
-        return axios.get(`http://localhost:5000/booking/${id}`)
+        return axios.get(`https://travel-cruise-srt-server.herokuapp.com/booking/${id}`)
     }
 
 
