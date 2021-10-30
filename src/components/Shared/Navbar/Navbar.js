@@ -5,6 +5,7 @@ import { ChevronDownIcon, MenuIcon, UserIcon, XIcon } from '@heroicons/react/out
 import { UserContext } from '../../../contexts/UserContext';
 import { NavLink } from 'react-router-dom';
 import navBackChange from "../../../utilities/navBackChange";
+import { BookingsContext } from "../../../contexts/BookingsContext";
 
 const navigation = [
     { name: 'Home', href: '/home' },
@@ -23,6 +24,8 @@ window.addEventListener('scroll', navBackChange);
 
 export default function Navbar() {
     const { user, logOut } = useContext(UserContext);
+    const { cart } = useContext(BookingsContext);
+
     return (
         <Disclosure as="nav" className="fixed top-0 z-50 w-full">
             {({ open }) => (
@@ -137,6 +140,7 @@ export default function Navbar() {
                                                             alt="user"
                                                         /> : <UserIcon className="block h-7 w-7 text-white p-1" aria-hidden="true" />
                                                     }
+                                                    <small className="absolute -top-1 -right-2 text-xs text-white font-bold bg-green-500 rounded-full px-1">{cart.length}</small>
                                                 </Menu.Button>
                                             </div>
                                             <Transition
@@ -162,6 +166,7 @@ export default function Navbar() {
                                                             <NavLink to="/mybookings"
                                                                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}>
                                                                 My Bookings
+                                                                <small className="mx-2 text-xs text-white font-bold bg-green-500 rounded-full px-1">{cart.length}</small>
                                                             </NavLink>
                                                         )}
                                                     </Menu.Item>
