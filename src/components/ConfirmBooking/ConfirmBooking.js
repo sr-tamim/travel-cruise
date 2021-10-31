@@ -3,6 +3,8 @@ import { BookingsContext } from '../../contexts/BookingsContext';
 import { CartContext } from '../../contexts/CartContext';
 import { UserContext } from '../../contexts/UserContext';
 
+
+// checkout page
 const ConfirmBooking = () => {
     const { user } = useContext(UserContext);
     const { addBooking } = useContext(BookingsContext);

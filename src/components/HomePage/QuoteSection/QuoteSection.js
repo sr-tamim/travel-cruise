@@ -7,6 +7,7 @@ const quoteStyles = {
     backgroundSize: 'cover'
 }
 
+// quote section in homepage
 const QuoteSection = () => {
     return (
         <section className="pb-0 px-0">

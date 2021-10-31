@@ -1,5 +1,6 @@
 import React from 'react';
 
+// why choose travel cruise
 const WhyUsSection = () => {
     return (
         <section className="container mx-auto">

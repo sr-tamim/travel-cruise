@@ -4,6 +4,7 @@ import { CartContext } from '../../contexts/CartContext';
 import Bookings from '../Bookings/Bookings';
 import DeleteModal from '../ConfirmModal/DeleteModal';
 
+// show user's all bookings
 const MyBookings = () => {
     const { cart, emptyCart } = useContext(CartContext);
     const [openModal, setOpenModal] = useState(false);

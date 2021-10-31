@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { UserContext } from '../../contexts/UserContext';
 
+// contact with travel cruise form page
 const ContactPage = () => {
     const { user } = useContext(UserContext);
     const formInputs = {

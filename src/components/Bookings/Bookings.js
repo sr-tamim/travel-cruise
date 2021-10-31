@@ -1,8 +1,10 @@
 import React from 'react';
 import SingleBooking from './SingleBooking/SingleBooking';
 
+// show all tour bookings
 const Bookings = ({ places, cart }) => {
-    const items = places || cart;
+    // this component is used on showing tour bookings in manage bookings page and cart details page that's why getting info from available props [ places or cart | only one is available always ]
+    const items = places || cart; // get available bookings
     const totalCost = items.reduce((previous, current) => previous + current.cost, 0);
 
     return (

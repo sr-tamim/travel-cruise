@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 
+// toppest section in homepage
 export default function HeroSection() {
     return (
         <section>
             <div className="relative bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto my-8 md:my-0">
                     <div className="relative z-10 md:py-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-36 xl:pb-48">
+                        {/* img and text divider svg */}
                         <svg
                             className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
                             fill="currentColor"
@@ -16,7 +18,7 @@ export default function HeroSection() {
                             <polygon points="50,0 100,0 50,100 0,100" />
                         </svg>
 
-
+                        {/* all texts */}
                         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                             <div className="sm:text-center lg:text-left">
                                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">

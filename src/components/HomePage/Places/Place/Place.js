@@ -6,6 +6,8 @@ const buttonStyle = {
     background: 'linear-gradient(to right, #1B77BA, #8BC547)'
 }
 
+
+// single tour place container for all tour places section
 const Place = ({ place }) => {
     const { placeID, placeName, placePHOTO, duration, country,
         shortDescription, cost } = place;

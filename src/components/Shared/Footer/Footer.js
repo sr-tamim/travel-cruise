@@ -91,15 +91,21 @@ const Footer = () => {
                         <div className="sm:w-full px-4 md:w-1/4">
                             <h6 className="font-bold mb-2">Stay connected</h6>
                             <div className="flex">
-                                <NavLink to="/" className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200">
+                                <a href="https://facebook.com/srtamim21"
+                                    className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200"
+                                    rel="noreferrer" target="_blank">
                                     <img src="/images/facebook.svg" className="w-full h-full" alt="" />
-                                </NavLink>
-                                <NavLink to="/" className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200">
+                                </a>
+                                <a href="https://twitter.com/TaMiM__tamim"
+                                    className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200"
+                                    rel="noreferrer" target="_blank">
                                     <img src="/images/twitter.svg" className="w-full h-full" alt="" />
-                                </NavLink>
-                                <NavLink to="/" className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200">
+                                </a>
+                                <a href="https://linkedin.com/in/srtamim"
+                                    className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200"
+                                    rel="noreferrer" target="_blank">
                                     <img src="/images/linkedin-in.svg" className="w-full h-full" alt="" />
-                                </NavLink>
+                                </a>
                             </div>
                         </div>
 

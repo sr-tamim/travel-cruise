@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
+// all months name for showing date info
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const Subscribers = () => {
     const [subscribers, setSubscribers] = useState(null);
+
+    // get subscribers from database
     useEffect(() => {
         axios.get('https://travel-cruise-srt-server.herokuapp.com/subscribers')
             .then(({ data }) => {
@@ -17,6 +20,8 @@ const Subscribers = () => {
             })
             .catch(console.dir);
     }, [])
+
+    // show all subscribers in a table
     return (subscribers &&
         <section className="container mx-auto px-4">
             <h1 className="text-3xl font-extrabold text-green-600 text-center my-8 md:text-5xl">Subscribers</h1>

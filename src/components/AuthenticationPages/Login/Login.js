@@ -2,12 +2,17 @@ import React, { useContext } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../../contexts/UserContext';
 
+// firebase login page
 const Login = () => {
     const { user, googleLogin } = useContext(UserContext);
+
+    // redirect user to the previous page, if no previous page available then redirect to profile page
     const location = useLocation();
     const backToPrevious = location.state?.from?.pathname || '/profile';
     const history = useHistory();
     user && history.push(backToPrevious);
+
+    // only google login functionality added
     return (
         <section className="flex justify-center flex-col">
             {backToPrevious !== '/profile' &&

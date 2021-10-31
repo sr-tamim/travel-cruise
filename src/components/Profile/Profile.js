@@ -10,6 +10,7 @@ const Profile = () => {
     const { user, logOut } = useContext(UserContext);
     return (
         <section className="flex flex-col items-center">
+            {/* show user image if available, if not then show user icon */}
             <div className="my-4 w-36 h-36 md:h-56 md:w-56
             bg-gray-500 rounded-full overflow-hidden">
                 {user.photoURL ?

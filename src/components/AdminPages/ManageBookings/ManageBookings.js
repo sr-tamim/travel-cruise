@@ -3,26 +3,36 @@ import { NavLink } from 'react-router-dom';
 import { BookingsContext } from '../../../contexts/BookingsContext';
 import DeleteModal from '../../ConfirmModal/DeleteModal';
 
+// all months name for showing date info
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 
 
 const ManageBookings = () => {
+    // get all tour bookings info from context
     const { allBookings, deleteBooking, setStatus } = useContext(BookingsContext);
+
+    // save bookings info in a state
     const [bookings, setBookings] = useState(null);
     const [openModal, setOpenModal] = useState(false);
 
+    // change this components bookings info state every time context's booking info changes and do some tweaks
     useEffect(() => {
-        const newBookings = !allBookings ? null : allBookings.map(info => {
-            const { _id, name, email, photoURL: image, bookings,
-                country, city, status, dateTime } = info;
-            return {
-                _id, name, email, image, bookings, country, city, status, dateTime: new Date(dateTime)
-            }
-        })
+        // set null if not available
+        const newBookings = !allBookings ? null
+            : allBookings.map(info => {
+                const { _id, name, email, photoURL: image, bookings,
+                    country, city, status, dateTime } = info;
+                // change some info of booking info 
+                // [ image to photoURL, transform date millisecond to object ]
+                return {
+                    _id, name, email, image, bookings, country, city, status, dateTime: new Date(dateTime)
+                }
+            })
         setBookings(newBookings);
     }, [allBookings])
 
+    // manage all tour bookings
     return (bookings &&
         <section className="container mx-auto w-full">
             <h1 className="text-3xl text-green-600 font-extrabold text-center

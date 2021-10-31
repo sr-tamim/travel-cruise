@@ -5,6 +5,7 @@ import QuoteSection from './QuoteSection/QuoteSection';
 import SubscribeSection from './SubscribeSection/SubscribeSection';
 import WhyUsSection from './WhyUsSection/WhyUsSection';
 
+// homepage
 const HomePage = () => {
     return (
         <>

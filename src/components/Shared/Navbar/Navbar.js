@@ -11,12 +11,13 @@ import { CartContext } from "../../../contexts/CartContext";
 const navigation = [
     { name: 'Home', href: '/home' },
     { name: 'About', href: '/about' },
+    { name: 'Tours', href: '/tours' },
     { name: 'Contact', href: '/contact' },
 ]
 
 // admin navigation links
 const adminActions = [
-    { name: 'Subscribers', href: '/subscribers' },
+    { name: 'Manage Subscribers', href: '/subscribers' },
     { name: 'Manage Bookings', href: '/manage/bookings' },
     { name: 'Add Tour', href: '/addtour' }
 ]

@@ -1,8 +1,11 @@
 import React, { useContext, useRef } from 'react';
 import { PlacesContext } from '../../../contexts/PlacesContext';
 
+// add a new tour place in database
 const AddTour = () => {
     const { addTourPlace } = useContext(PlacesContext);
+
+    // form refs
     const formInputs = {
         placeName: useRef(),
         shortDescription: useRef(),
@@ -20,14 +23,19 @@ const AddTour = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+
         const tourInfo = {};
+        // get values from form refs
         Object.keys(formInputs).forEach(key => {
             tourInfo[key] = formInputs[key].current.value;
         });
+        // transform features and languages to an array
         tourInfo.features = tourInfo.features.split(',');
         tourInfo.languages = tourInfo.languages.split(',');
+
+        // add to database
         addTourPlace(tourInfo);
-        event.target.reset();
+        event.target.reset();  // reset form
     }
 
     return (

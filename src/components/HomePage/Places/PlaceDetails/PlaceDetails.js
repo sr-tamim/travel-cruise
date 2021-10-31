@@ -8,6 +8,7 @@ const buttonStyle = {
     background: 'linear-gradient(to right, #1B77BA, #8BC547)'
 }
 
+// show all details of a tour place in a page
 const PlaceDetails = () => {
     const { placeID } = useParams();
     const [placeDetails, setPlaceDetails] = useState(null);

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 
+// subscription section in homepage
 const SubscribeSection = () => {
     const emailRef = useRef();
     const handleSubmit = event => {

@@ -1,6 +1,7 @@
 import { CheckIcon } from '@heroicons/react/outline';
 import React from 'react';
 
+// about travel cruise
 const AboutPage = () => {
     return (
         <section>

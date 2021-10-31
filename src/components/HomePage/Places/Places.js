@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { PlacesContext } from '../../../contexts/PlacesContext';
 import Place from './Place/Place';
 
-
+// all tour places section
 const Places = () => {
     const { places } = useContext(PlacesContext);
     return (
