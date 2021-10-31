@@ -32,6 +32,12 @@ const ManageBookings = () => {
         setBookings(newBookings);
     }, [allBookings])
 
+    const [deletionID, setDeletionID] = useState(null);
+    const handleDelete = (bookingID) => {
+        setDeletionID(bookingID);
+        setOpenModal(true);
+    }
+
     // manage all tour bookings
     return (bookings &&
         <section className="container mx-auto w-full">
@@ -133,12 +139,12 @@ const ManageBookings = () => {
                                                             >Refuse</button>
                                                         }
                                                         <button
-                                                            onClick={() => setOpenModal(true)}
+                                                            onClick={() => handleDelete(booking._id)}
                                                             className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
                                                         >Delete</button>
 
                                                         <DeleteModal state={{ openModal, setOpenModal }}
-                                                            confirmFunction={() => deleteBooking(booking._id)} />
+                                                            confirmFunction={() => deleteBooking(deletionID)} />
                                                     </div>
                                                 </td>
                                             </tr>

@@ -54,14 +54,17 @@ export default function Navbar() {
                             </div>
 
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex-shrink-0 flex items-center">
-                                    <img
-                                        className="block h-8 w-auto mr-2"
-                                        src="/favicon.ico"
-                                        alt="travel cruise"
-                                    />
-                                    <h1 className="font-bold text-xl text-green-800">
-                                        Travel Cruise</h1>
+                                <div className="flex-shrink-0">
+                                    <NavLink to="/" className="flex items-center">
+                                        <img
+                                            className="block h-8 w-auto mr-2"
+                                            src="/favicon.ico"
+                                            alt="travel cruise"
+                                        />
+                                        <h1 className="font-bold text-xl text-green-800">
+                                            Travel Cruise
+                                        </h1>
+                                    </NavLink>
                                 </div>
                                 <div className="hidden items-center sm:flex sm:ml-6">
                                     <div className="flex space-x-4">
