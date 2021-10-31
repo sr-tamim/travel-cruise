@@ -22,7 +22,7 @@ const MyBookings = () => {
                     </NavLink>
                 </div>
             </div>
-            <Bookings places={cart} />
+            <Bookings cart={cart} />
             <DeleteModal state={{ openModal, setOpenModal }}
                 confirmFunction={emptyCart} />
         </section>

@@ -60,7 +60,7 @@ export default function Navbar() {
                                                 key={item.name}
                                                 to={item.href}
                                                 activeClassName='text-green-600 font-bold'
-                                                className={classNames('text-black hover:bg-green-100 md:px-3 pt-1 rounded-md text-base')}
+                                                className={classNames('text-black hover:bg-green-100 md:px-3 pt-2 pb-1 rounded-md text-base')}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
                                                 {item.name}
@@ -72,7 +72,7 @@ export default function Navbar() {
                                                     <Popover.Button
                                                         className={classNames(
                                                             open ? 'text-green-600 font-bold' : 'text-black',
-                                                            'group rounded-md inline-flex items-center text-base font-medium hover:bg-green-100 md:px-3 pt-1 z-50'
+                                                            'group rounded-md inline-flex items-center text-base font-medium hover:bg-green-100 md:px-3 pt-2 pb-1 z-50'
                                                         )}
                                                     >
                                                         <span>Admin Actions</span>

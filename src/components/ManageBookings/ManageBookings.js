@@ -115,16 +115,16 @@ const ManageBookings = () => {
                                                         {booking.status !== 'Approved' ?
                                                             <button
                                                                 onClick={() => setStatus('Approved', booking._id)}
-                                                                className="text-white bg-green-500 my-1 py-1 rounded-md"
+                                                                className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
                                                             >Approve</button>
                                                             : <button
                                                                 onClick={() => setStatus('Pending', booking._id)}
-                                                                className="text-white bg-green-500 my-1 py-1 rounded-md"
+                                                                className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
                                                             >Refuse</button>
                                                         }
                                                         <button
                                                             onClick={() => setOpenModal(true)}
-                                                            className="text-white bg-green-500 my-1 py-1 rounded-md"
+                                                            className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
                                                         >Delete</button>
 
                                                         <DeleteModal state={{ openModal, setOpenModal }}

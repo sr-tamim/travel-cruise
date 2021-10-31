@@ -3,13 +3,14 @@ import { MinusIcon, PlusIcon } from '@heroicons/react/outline';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../../../contexts/CartContext';
 
-const SingleBooking = ({ places }) => {
-    const { cart, addToCart, removeItems, removeItem } = useContext(CartContext);
+const SingleBooking = ({ places, cart }) => {
+    const items = places || cart;
     const removedDuplicates = [];
-    for (const place of places) {
+    for (const place of items) {
         removedDuplicates.filter(p => p._id === place._id).length === 0 && removedDuplicates.push(place);
     }
 
+    const { addToCart, removeItems, removeItem } = useContext(CartContext);
     const handleQuantity = (method, place) => {
         method === 'plus' && addToCart(place);
         method === 'minus' && removeItem(place);
@@ -28,24 +29,27 @@ const SingleBooking = ({ places }) => {
 
                     <h6 className="flex items-center"
                     >Quantity:
-                        <MinusIcon
+                        {cart && <MinusIcon
                             onClick={() => handleQuantity('minus', place)}
                             className="inline h-6 w-6 text-white bg-green-500 p-1 mx-2 cursor-pointer
                                             shadow-md rounded" aria-hidden="true" />
-                        {cart.filter(p => p.placeID === place.placeID).length}
-                        <PlusIcon
+                        }
+                        {items.filter(p => p.placeID === place.placeID).length}
+
+                        {cart && <PlusIcon
                             onClick={() => handleQuantity('plus', place)}
                             className="inline h-6 w-6 text-white bg-green-500 p-1 mx-2 cursor-pointer
                                             shadow-md rounded" aria-hidden="true" />
+                        }
                     </h6>
 
                     <div className="my-2 text-white text-sm">
                         <NavLink to={`/places/${place.placeID}`}>
                             <button className="bg-green-600 rounded px-4 py-2 mr-4">See Details</button>
                         </NavLink>
-                        <button onClick={() => removeItems(place)}
+                        {cart && <button onClick={() => removeItems(place)}
                             className="bg-green-600 rounded px-4 py-2">
-                            Remove</button>
+                            Remove</button>}
                     </div>
                 </div>
             </div>)}
