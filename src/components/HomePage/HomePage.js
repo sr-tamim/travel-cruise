@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './HeroSection/HeroSection';
 import Places from './Places/Places';
 import QuoteSection from './QuoteSection/QuoteSection';
+import SubscribeSection from './SubscribeSection/SubscribeSection';
 
 const HomePage = () => {
     return (
@@ -9,6 +10,7 @@ const HomePage = () => {
             <HeroSection />
             <Places />
             <QuoteSection />
+            <SubscribeSection />
         </>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { BookingsContext } from '../../contexts/BookingsContext';
-import DeleteModal from '../ConfirmModal/DeleteModal';
+import { BookingsContext } from '../../../contexts/BookingsContext';
+import DeleteModal from '../../ConfirmModal/DeleteModal';
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -139,7 +139,6 @@ const ManageBookings = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     );

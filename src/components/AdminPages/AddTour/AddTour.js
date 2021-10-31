@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import { PlacesContext } from '../../contexts/PlacesContext';
+import { PlacesContext } from '../../../contexts/PlacesContext';
 
 const AddTour = () => {
     const { addTourPlace } = useContext(PlacesContext);

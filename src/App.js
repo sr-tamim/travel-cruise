@@ -1,7 +1,9 @@
 import { useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import AddTour from './components/AddTour/AddTour';
+import AddTour from './components/AdminPages/AddTour/AddTour';
+import ManageBookings from './components/AdminPages/ManageBookings/ManageBookings';
+import Subscribers from './components/AdminPages/Subscribers/Subscribers';
 import Login from './components/AuthenticationPages/Login/Login';
 import ConfirmBooking from './components/ConfirmBooking/ConfirmBooking';
 import ContactPage from './components/ContactPage/ContactPage';
@@ -9,7 +11,6 @@ import HomePage from './components/HomePage/HomePage';
 import PlaceDetails from './components/HomePage/Places/PlaceDetails/PlaceDetails';
 import Places from './components/HomePage/Places/Places';
 import DetailedBooking from './components/ManageBookings/DetailedBooking/DetailedBooking';
-import ManageBookings from './components/ManageBookings/ManageBookings';
 import MyBookings from './components/MyBookings/MyBookings';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Profile from './components/Profile/Profile';
@@ -41,6 +42,7 @@ function App() {
                 <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
                 <PrivateRoute path="/profile"><Profile /></PrivateRoute>
                 <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
+                <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
                 <BookingsContextProvider>
                   <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
                   <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>

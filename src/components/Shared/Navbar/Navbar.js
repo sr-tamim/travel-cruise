@@ -9,9 +9,11 @@ import { CartContext } from "../../../contexts/CartContext";
 
 const navigation = [
     { name: 'Home', href: '/home' },
+    { name: 'Tours', href: '/tours' },
     { name: 'Contact', href: '/contact' },
 ]
 const adminActions = [
+    { name: 'Subscribers', href: '/subscribers' },
     { name: 'Manage Bookings', href: '/manage/bookings' },
     { name: 'Add Tour', href: '/addtour' }
 ]
