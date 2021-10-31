@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { MinusIcon, PlusIcon } from '@heroicons/react/outline';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../../../contexts/CartContext';
+import DeleteModal from '../../ConfirmModal/DeleteModal';
 
 // single booking component for all bookings page
 const SingleBooking = ({ places, cart }) => {
@@ -21,6 +22,13 @@ const SingleBooking = ({ places, cart }) => {
         method === 'minus' && removeItem(place);
     }
 
+    // delete confirmation functionality
+    const [openModal, setOpenModal] = useState(false);
+    const [deletePlace, setDeletePlace] = useState(null);
+    const handleDelete = (place) => {
+        setDeletePlace(place);
+        setOpenModal(true);
+    }
 
     return (
         <>
@@ -56,9 +64,14 @@ const SingleBooking = ({ places, cart }) => {
                         </NavLink>
 
                         {/* remove item button only be shown in cart details page */}
-                        {cart && <button onClick={() => removeItems(place)}
-                            className="bg-green-600 rounded px-4 py-2">
-                            Remove</button>}
+                        {cart && <>
+                            <button onClick={() => handleDelete(place)}
+                                className="bg-green-600 rounded px-4 py-2">
+                                Remove</button>
+                            <DeleteModal state={{ openModal, setOpenModal }}
+                                confirmFunction={() => removeItems(deletePlace)} />
+                        </>
+                        }
                     </div>
                 </div>
             </div>)}

@@ -14,7 +14,6 @@ const ManageBookings = () => {
 
     // save bookings info in a state
     const [bookings, setBookings] = useState(null);
-    const [openModal, setOpenModal] = useState(false);
 
     // change this components bookings info state every time context's booking info changes and do some tweaks
     useEffect(() => {
@@ -32,6 +31,8 @@ const ManageBookings = () => {
         setBookings(newBookings);
     }, [allBookings])
 
+    // delete confirmation functionality
+    const [openModal, setOpenModal] = useState(false);
     const [deletionID, setDeletionID] = useState(null);
     const handleDelete = (bookingID) => {
         setDeletionID(bookingID);
