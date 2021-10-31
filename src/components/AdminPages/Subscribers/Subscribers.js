@@ -6,7 +6,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep",
 const Subscribers = () => {
     const [subscribers, setSubscribers] = useState(null);
     useEffect(() => {
-        axios.get('http://localhost:5000/subscribers')
+        axios.get('https://travel-cruise-srt-server.herokuapp.com/subscribers')
             .then(({ data }) => {
                 const modifiedData = [];
                 data.forEach(d => {

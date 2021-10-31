@@ -7,7 +7,7 @@ const SubscribeSection = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const dateTime = Date.now();
-        axios.post('http://localhost:5000/subscription', {
+        axios.post('https://travel-cruise-srt-server.herokuapp.com/subscription', {
             subscriptionInfo: { email, dateTime }
         }).then(({ data }) => data.insertedId && alert('Thanks For Your Subscription'));
         event.target.reset();
