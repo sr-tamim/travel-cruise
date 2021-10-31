@@ -8,6 +8,11 @@ const Places = () => {
     return (
         <section>
             <h1 className="text-5xl text-center text-green-600 font-extrabold">Places to Visit</h1>
+            <h5 className="text-sm text-gray-500 text-center font-medium my-4">
+                <q>The world is a book and those who do not
+                    travel read only one page.</q>
+                {" "}― Augustine of Hippo
+            </h5>
             <div className="container flex flex-wrap mx-auto"
             >{places &&
                 places.map(place => <Place key={place.placeID} place={place} />)

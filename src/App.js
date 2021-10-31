@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import AboutPage from './components/AboutPage/AboutPage';
 import AddTour from './components/AdminPages/AddTour/AddTour';
 import ManageBookings from './components/AdminPages/ManageBookings/ManageBookings';
 import Subscribers from './components/AdminPages/Subscribers/Subscribers';
@@ -38,6 +39,7 @@ function App() {
                 <Route exact path="/"><HomePage /></Route>
                 <Route path="/login"><Login /></Route>
                 <Route path="/tours"><Places /></Route>
+                <Route path="/about"><AboutPage /></Route>
                 <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
                 <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
                 <PrivateRoute path="/profile"><Profile /></PrivateRoute>

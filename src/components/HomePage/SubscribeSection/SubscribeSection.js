@@ -21,7 +21,7 @@ const SubscribeSection = () => {
         >
             <div className="container mx-auto text-white px-2 py-24">
                 <h5>IT'S TIME FOR DISCOUNTS</h5>
-                <h1 className="text-5xl font-bold text-green-100">Subscribe <strong className="font-extrabold">& Travel!</strong></h1>
+                <h1 className="text-5xl font-bold text-green-50">Subscribe <strong className="font-extrabold">& Travel!</strong></h1>
                 <div className="my-4">
                     <form onSubmit={handleSubmit}>
                         <input
@@ -32,11 +32,11 @@ const SubscribeSection = () => {
                             required
                             autoComplete="email"
                             placeholder="Email address"
-                            className="w-96 text-black border-none outline-none py-3 rounded sm:text-sm"
+                            className="w-full sm:w-96 text-black border-none outline-none py-3 rounded sm:text-sm"
                         />
                         <button
                             type="submit"
-                            className="py-2 px-6 border border-transparent font-bold rounded-md text-white bg-green-600 hover:bg-green-500"
+                            className="w-full sm:w-auto py-2 px-6 border border-transparent font-bold rounded-md text-white bg-green-600 hover:bg-green-500"
                         >
                             Submit
                         </button>
