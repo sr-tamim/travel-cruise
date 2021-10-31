@@ -7,6 +7,7 @@ import UserContextProvider from './contexts/UserContext';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* firebase user info context */}
     <UserContextProvider>
       <App />
     </UserContextProvider>

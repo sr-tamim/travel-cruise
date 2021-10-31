@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useHistory } from "react-router";
 
+// this custom hook contains all of tour booking info
 export default function useBookings() {
     const history = useHistory();
 

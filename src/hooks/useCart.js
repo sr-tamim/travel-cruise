@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
+// this custom hook contains all of user's cart related info
 export default function useCart() {
     const [cart, setCart] = useState([]);
 

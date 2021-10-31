@@ -3,10 +3,11 @@ import { useState } from "react";
 import firebaseInit from "../firebase/firebase.config";
 import signInGoogle from "../firebase/sign-in-google";
 
-firebaseInit();
-const auth = getAuth();
+firebaseInit(); // initialize firebase
+const auth = getAuth(); // get auth info
 
 
+// this custom hook contains all of firebase user related info
 const useFirebase = () => {
     const [user, setUser] = useState(null);
     const [userLoading, setUserLoading] = useState(true);

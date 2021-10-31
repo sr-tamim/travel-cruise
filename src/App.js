@@ -1,3 +1,4 @@
+// import necessary files, modules and components
 import { useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
@@ -25,11 +26,12 @@ import { UserContext } from './contexts/UserContext';
 
 
 function App() {
-  const { userLoading } = useContext(UserContext);
+  const { userLoading } = useContext(UserContext); // get firebase user loading status
 
   return (
     <div className="App">
       <CartContextProvider><PlacesContextProvider>
+        {/* loading spinner while load firebase user info */}
         {userLoading ? <Loading /> :
           <>
             <Router>
@@ -40,11 +42,15 @@ function App() {
                 <Route path="/login"><Login /></Route>
                 <Route path="/tours"><Places /></Route>
                 <Route path="/about"><AboutPage /></Route>
+
+                {/* private routes */}
                 <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
                 <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
                 <PrivateRoute path="/profile"><Profile /></PrivateRoute>
                 <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
                 <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
+
+                {/* tour bookings related information context */}
                 <BookingsContextProvider>
                   <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
                   <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>
@@ -52,7 +58,7 @@ function App() {
                   <PrivateRoute path="/addtour"><AddTour /></PrivateRoute>
                 </BookingsContextProvider>
               </Switch>
-              <Footer />
+              <Footer /> {/* footer */}
             </Router>
           </>
         }

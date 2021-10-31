@@ -1,4 +1,4 @@
-
+// change navbar class on scroll
 const navBackChange = () => {
     window.addEventListener('scroll', () => {
         (window.scrollY) > 50 ?

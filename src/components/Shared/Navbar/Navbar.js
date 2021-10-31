@@ -7,11 +7,14 @@ import { NavLink } from 'react-router-dom';
 import navBackChange from "../../../utilities/navBackChange";
 import { CartContext } from "../../../contexts/CartContext";
 
+// navigation links
 const navigation = [
     { name: 'Home', href: '/home' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
 ]
+
+// admin navigation links
 const adminActions = [
     { name: 'Subscribers', href: '/subscribers' },
     { name: 'Manage Bookings', href: '/manage/bookings' },
@@ -22,6 +25,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
+// change navbar class while scrolling
 window.addEventListener('scroll', navBackChange);
 
 export default function Navbar() {
@@ -33,6 +37,8 @@ export default function Navbar() {
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+
+                        {/* navbar */}
                         <div className="relative flex items-center justify-between h-16">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
@@ -45,6 +51,7 @@ export default function Navbar() {
                                     )}
                                 </Disclosure.Button>
                             </div>
+
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="flex-shrink-0 flex items-center">
                                     <img
@@ -57,6 +64,7 @@ export default function Navbar() {
                                 </div>
                                 <div className="hidden items-center sm:flex sm:ml-6">
                                     <div className="flex space-x-4">
+                                        {/* large screen navigation links */}
                                         {navigation.map((item) => (
                                             <NavLink
                                                 key={item.name}
@@ -68,6 +76,8 @@ export default function Navbar() {
                                                 {item.name}
                                             </NavLink>
                                         ))}
+
+                                        {/* admin action links large screen */}
                                         <Popover className="relative">
                                             {({ open }) => (
                                                 <>
@@ -120,6 +130,8 @@ export default function Navbar() {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* user state info in navbar */}
                             <div className="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 {!user ?
                                     <button>
@@ -192,9 +204,12 @@ export default function Navbar() {
                             </div>
                         </div>
                     </div>
+                    {/* navbar end */}
 
+                    {/* mobile menu */}
                     <Disclosure.Panel className="sm:hidden bg-white py-3">
                         <div className="px-2 pt-2 pb-3 space-y-1">
+                            {/* mobile navigation links */}
                             {navigation.map((item) => (
                                 <Disclosure.Button
                                     key={item.name}
@@ -207,6 +222,8 @@ export default function Navbar() {
                                     </NavLink>
                                 </Disclosure.Button>
                             ))}
+
+                            {/* admin actions in small screen */}
                             <Popover className="relative">
                                 {({ open }) => (
                                     <>

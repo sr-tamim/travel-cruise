@@ -1,5 +1,6 @@
 import React from 'react';
 
+// loading spinner
 const Loading = () => {
     return (
         <section className="flex justify-center">
