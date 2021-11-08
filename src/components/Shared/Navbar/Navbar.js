@@ -140,8 +140,8 @@ export default function Navbar() {
                                 {!user ?
                                     <button>
                                         <NavLink
-                                            to="/login"
-                                            className="px-4 py-1 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-1 md:text-lg md:px-8 md:py-3"
+                                            to="/authentication"
+                                            className="px-4 py-1 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-1 md:text-lg md:px-6 md:py-2"
                                         >
                                             Login
                                         </NavLink>

@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UserContextProvider from './contexts/UserContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* firebase user info context */}
-    <UserContextProvider>
-      <App />
-    </UserContextProvider>
-  </React.StrictMode>,
+    <App />
+  </React.StrictMode >,
   document.getElementById('root')
 );
 

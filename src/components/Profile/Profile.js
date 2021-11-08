@@ -21,7 +21,7 @@ const Profile = () => {
                     /> : <UserIcon className="block h-full w-full text-white p-6" aria-hidden="true" />
                 }
             </div>
-            <h2 className="text-2xl font-bold lg:text-4xl text-green-600">{user.displayName}</h2>
+            <h2 className="text-2xl font-bold md:text-4xl text-green-600">{user.displayName}</h2>
             <h4 className="text-sm md:text-xl">{user.email}</h4>
             <div className="my-6">
                 <button onClick={logOut} className="text-white text-lg font-bold py-2 px-6 rounded-lg shadow-lg hover:shadow-xl"
