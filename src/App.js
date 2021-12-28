@@ -21,6 +21,8 @@ import CartContextProvider from './contexts/CartContext';
 import PlacesContextProvider from './contexts/PlacesContext';
 import UserContextProvider from './contexts/UserContext';
 import AuthenticationPages from './components/AuthenticationPages/AuthenticationPages';
+import MakeAdmin from './components/AdminPages/MakeAdmin/MakeAdmin';
+import AdminRoute from './components/AdminRoute/AdminRoute';
 
 
 function App() {
@@ -29,32 +31,33 @@ function App() {
     <div className="App">
       {/* firebase user info context */}
       <UserContextProvider><CartContextProvider><PlacesContextProvider>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/"><HomePage /></Route>
-            <Route path="/home"><HomePage /></Route>
-            <Route path="/tours"><Places /></Route>
-            <Route path="/about"><AboutPage /></Route>
-            <Route path="/authentication"><AuthenticationPages /></Route>
+        {/* tour bookings related information context */}
+        <BookingsContextProvider>
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path="/"><HomePage /></Route>
+              <Route path="/home"><HomePage /></Route>
+              <Route path="/tours"><Places /></Route>
+              <Route path="/about"><AboutPage /></Route>
+              <Route path="/authentication"><AuthenticationPages /></Route>
 
-            {/* private routes */}
-            <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
-            <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
-            <PrivateRoute path="/profile"><Profile /></PrivateRoute>
-            <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
-            <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
+              {/* private routes */}
+              <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
+              <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
+              <PrivateRoute path="/profile"><Profile /></PrivateRoute>
+              <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
+              <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
+              <AdminRoute path="/makeadmin"><MakeAdmin /></AdminRoute>
 
-            {/* tour bookings related information context */}
-            <BookingsContextProvider>
-              <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
+              <AdminRoute path="/manage/bookings"><ManageBookings /></AdminRoute>
               <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>
               <PrivateRoute path="/booking/confirm"><ConfirmBooking /></PrivateRoute>
-              <PrivateRoute path="/addtour"><AddTour /></PrivateRoute>
-            </BookingsContextProvider>
-          </Switch>
-          <Footer /> {/* footer */}
-        </Router>
+              <AdminRoute path="/addtour"><AddTour /></AdminRoute>
+            </Switch>
+            <Footer /> {/* footer */}
+          </Router>
+        </BookingsContextProvider>
       </PlacesContextProvider></CartContextProvider></UserContextProvider>
     </div>
   );

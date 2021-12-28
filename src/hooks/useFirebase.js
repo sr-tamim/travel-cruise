@@ -1,3 +1,4 @@
+import axios from "axios";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useState } from "react";
 import firebaseInit from "../firebase/firebase.config";
@@ -16,12 +17,6 @@ const useFirebase = () => {
     const [usrError, setUsrError] = useState(null);
     const [authLoading, setAuthLoading] = useState(false);
 
-    onAuthStateChanged(auth, usr => {
-        usr ? setUser(usr) : user && setUser(null);
-        usr && setUsrError(null);
-        loadingUserOnReload && setLoadingUserOnRelaod(false);
-    })
-
     const modifyError = (error) => {
         if (error.message.startsWith('Firebase: Error')) {
             const modifiedError = error.message.split('/')[1].split('-').join(' ').split(')')[0];
@@ -29,22 +24,41 @@ const useFirebase = () => {
         }
     }
 
+
+    onAuthStateChanged(auth, usr => {
+        usr ? setUser(usr) : user && setUser(null);
+        usr && setUsrError(null);
+        loadingUserOnReload && setLoadingUserOnRelaod(false);
+    })
+
+    // save user info in database
+    function saveUserToDB({ email }) {
+        axios.post('https://travel-cruise-srt-server.herokuapp.com/users', { email, role: 'public' })
+            .catch(err => console.log(err))
+    }
+
+
+    // starting authentication process
     function authStart() {
         setAuthLoading(true)
         setUsrError(null)
     }
 
+    // authentication functions
     const logOut = () => {
         signOut(auth).catch(err => modifyError(err))
     }
     const googleLogin = () => {
         authStart()
-        signInGoogle(auth).catch(err => modifyError(err))
+        signInGoogle(auth).then(() => saveUserToDB(auth.currentUser))
+            .catch(err => modifyError(err))
             .finally(() => setAuthLoading(false))
     }
     const signUp = (name, email, password) => {
         authStart()
-        register(auth, name, email, password).catch(err => modifyError(err))
+        register(auth, name, email, password)
+            .then(() => saveUserToDB(auth.currentUser))
+            .catch(err => modifyError(err))
             .finally(() => setAuthLoading(false));
     }
     const loginEmail = (email, password) => {

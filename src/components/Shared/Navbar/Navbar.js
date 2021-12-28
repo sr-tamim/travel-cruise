@@ -19,7 +19,8 @@ const navigation = [
 const adminActions = [
     { name: 'Manage Subscribers', href: '/subscribers' },
     { name: 'Manage Bookings', href: '/manage/bookings' },
-    { name: 'Add Tour', href: '/addtour' }
+    { name: 'Add Tour', href: '/addtour' },
+    { name: 'Make Admin', href: '/makeadmin' }
 ]
 
 function classNames(...classes) {

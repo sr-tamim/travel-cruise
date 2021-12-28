@@ -14,9 +14,7 @@ import SignUp from './SignUp/SignUp';
 const AuthenticationPages = () => {
     const { user, googleLogin } = useContext(UserContext);
 
-    // The `path` lets us build <Route> paths that are
-    // relative to the parent route, while the `url` lets
-    // us build relative links.
+    /* The `path` lets us build <Route> paths that are relative to the parent route, while the `url` lets us build relative links. */
     let { path, url } = useRouteMatch();
 
 
@@ -25,7 +23,6 @@ const AuthenticationPages = () => {
     const backToPrevious = location.state?.from?.pathname || '/profile';
     const history = useHistory();
     user && history.push(backToPrevious);
-
 
     return (
         <Router>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { BookingsContext } from '../../../contexts/BookingsContext';
 import DeleteModal from '../../ConfirmModal/DeleteModal';
+import { UserIcon } from '@heroicons/react/outline';
 
 // all months name for showing date info
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -92,8 +93,11 @@ const ManageBookings = () => {
                                             <tr key={booking.email}>
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <div className="flex items-center">
-                                                        <div className="flex-shrink-0 h-10 w-10">
-                                                            <img className="h-10 w-10 rounded-full" src={booking.image} alt="" />
+                                                        <div className="flex-shrink-0 h-10 w-10 bg-gray-700 rounded-full overflow-hidden flex items-center justify-center">
+                                                            {booking.image ?
+                                                                <img className="w-full" src={booking.image} alt="" />
+                                                                : <UserIcon className="block h-7 w-7 text-white p-1" aria-hidden="true" />
+                                                            }
                                                         </div>
                                                         <div className="ml-4">
                                                             <div className="text-sm font-medium text-gray-900">{booking.name}</div>
