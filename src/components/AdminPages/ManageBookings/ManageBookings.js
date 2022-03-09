@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { BookingsContext } from '../../../contexts/BookingsContext';
 import DeleteModal from '../../ConfirmModal/DeleteModal';
 import { UserIcon } from '@heroicons/react/outline';
+import { UserContext } from '../../../contexts/UserContext';
 
 // all months name for showing date info
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -10,6 +11,8 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep",
 
 
 const ManageBookings = () => {
+    const { userIsAdmin } = useContext(UserContext);
+
     // get all tour bookings info from context
     const { allBookings, deleteBooking, setStatus } = useContext(BookingsContext);
 
@@ -145,7 +148,8 @@ const ManageBookings = () => {
                                                         }
                                                         <button
                                                             onClick={() => handleDelete(booking._id)}
-                                                            className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
+                                                            className={`text-white my-1 py-1 px-3 rounded-md ${userIsAdmin ? 'bg-green-500' : 'bg-green-700'}`}
+                                                            disabled={!userIsAdmin}
                                                         >Delete</button>
 
                                                         <DeleteModal state={{ openModal, setOpenModal }}

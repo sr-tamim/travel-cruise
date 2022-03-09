@@ -50,7 +50,7 @@ function App() {
               <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
               <AdminRoute path="/makeadmin"><MakeAdmin /></AdminRoute>
 
-              <AdminRoute path="/manage/bookings"><ManageBookings /></AdminRoute>
+              <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
               <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>
               <PrivateRoute path="/booking/confirm"><ConfirmBooking /></PrivateRoute>
               <AdminRoute path="/addtour"><AddTour /></AdminRoute>

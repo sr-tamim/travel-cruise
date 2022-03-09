@@ -16,6 +16,7 @@ const useFirebase = () => {
     const [loadingUserOnReload, setLoadingUserOnRelaod] = useState(true);
     const [usrError, setUsrError] = useState(null);
     const [authLoading, setAuthLoading] = useState(false);
+    const [userIsAdmin, setUserIsAdmin] = useState(null);
 
     const modifyError = (error) => {
         if (error.message.startsWith('Firebase: Error')) {
@@ -29,6 +30,7 @@ const useFirebase = () => {
         usr ? setUser(usr) : user && setUser(null);
         usr && setUsrError(null);
         loadingUserOnReload && setLoadingUserOnRelaod(false);
+        usr && checkAdmin(usr.email)
     })
 
     // save user info in database
@@ -50,9 +52,9 @@ const useFirebase = () => {
     }
     const googleLogin = () => {
         authStart()
-        signInGoogle(auth).then(() => saveUserToDB(auth.currentUser))
+        signInGoogle(auth).then(() => setAuthLoading(false))
+            .then(() => saveUserToDB(auth.currentUser))
             .catch(err => modifyError(err))
-            .finally(() => setAuthLoading(false))
     }
     const signUp = (name, email, password) => {
         authStart()
@@ -66,10 +68,14 @@ const useFirebase = () => {
         signInEmail(auth, email, password).catch(err => modifyError(err))
             .finally(() => setAuthLoading(false))
     }
-
+    function checkAdmin(email) {
+        axios.post('https://travel-cruise-srt-server.herokuapp.com/isAdmin', { email })
+            .then(({ data }) => setUserIsAdmin(data))
+            .catch(err => console.log(err))
+    }
     return {
         user, setUser, loadingUserOnReload, authLoading, setAuthLoading,
-        usrError, setUsrError,
+        usrError, setUsrError, userIsAdmin,
         logOut, googleLogin, signUp, loginEmail
     }
 };
