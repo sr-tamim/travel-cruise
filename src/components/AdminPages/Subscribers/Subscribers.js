@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 
 // all months name for showing date info
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -22,7 +23,7 @@ const Subscribers = () => {
     }, [])
 
     // show all subscribers in a table
-    return (subscribers &&
+    return (!subscribers ? <LoadingSpinner className="my-36" width='w-16' height='h-16' /> :
         <section className="container mx-auto px-4">
             <h1 className="text-3xl font-extrabold text-green-600 text-center my-8 md:text-5xl">Subscribers</h1>
             <div className="my-8 w-full max-w-4xl mx-auto px-2">
