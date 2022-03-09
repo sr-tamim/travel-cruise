@@ -12,7 +12,7 @@ import Login from './Login/Login';
 import SignUp from './SignUp/SignUp';
 
 const AuthenticationPages = () => {
-    const { user, googleLogin } = useContext(UserContext);
+    const { user, googleLogin, loginEmail } = useContext(UserContext);
 
     /* The `path` lets us build <Route> paths that are relative to the parent route, while the `url` lets us build relative links. */
     let { path, url } = useRouteMatch();
@@ -57,10 +57,14 @@ const AuthenticationPages = () => {
                         <SignUp />
                     </Route>
                 </Switch>
-                <div className="flex justify-center my-12">
+                <div className="flex flex-col items-center my-12">
                     <button onClick={googleLogin}
                         className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:text-md">
                         Login with Google
+                    </button>
+                    <button onClick={() => loginEmail('demo@srt.com', '123456')}
+                        className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 mt-20 hover:bg-green-700 md:text-md">
+                        Skip Login
                     </button>
                 </div>
             </section>
