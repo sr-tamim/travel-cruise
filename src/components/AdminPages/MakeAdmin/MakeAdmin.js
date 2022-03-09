@@ -1,7 +1,10 @@
 import axios from 'axios';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
+import { UserContext } from '../../../contexts/UserContext';
 
 const MakeAdmin = () => {
+    const { userIsAdmin } = useContext(UserContext)
+
     const emailRef = useRef()
     const [status, setStatus] = useState(null)
     function handleSubmit(event) {
@@ -43,7 +46,8 @@ const MakeAdmin = () => {
                                 {status?.message}</div>}
                             <button
                                 type="submit"
-                                className="py-2 px-6 border border-transparent shadow-sm font-bold rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                                className={`py-2 px-6 border border-transparent shadow-sm font-bold rounded-md text-white ${userIsAdmin ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500`}
+                                disabled={!userIsAdmin}
                             >
                                 Make Admin
                             </button>

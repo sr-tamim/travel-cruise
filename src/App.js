@@ -22,7 +22,6 @@ import PlacesContextProvider from './contexts/PlacesContext';
 import UserContextProvider from './contexts/UserContext';
 import AuthenticationPages from './components/AuthenticationPages/AuthenticationPages';
 import MakeAdmin from './components/AdminPages/MakeAdmin/MakeAdmin';
-import AdminRoute from './components/AdminRoute/AdminRoute';
 
 
 function App() {
@@ -48,12 +47,12 @@ function App() {
               <PrivateRoute path="/profile"><Profile /></PrivateRoute>
               <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
               <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
-              <AdminRoute path="/makeadmin"><MakeAdmin /></AdminRoute>
+              <PrivateRoute path="/makeadmin"><MakeAdmin /></PrivateRoute>
 
               <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
               <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>
               <PrivateRoute path="/booking/confirm"><ConfirmBooking /></PrivateRoute>
-              <AdminRoute path="/addtour"><AddTour /></AdminRoute>
+              <PrivateRoute path="/addtour"><AddTour /></PrivateRoute>
             </Switch>
             <Footer /> {/* footer */}
           </Router>

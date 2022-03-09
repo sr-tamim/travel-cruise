@@ -1,8 +1,10 @@
 import React, { useContext, useRef } from 'react';
 import { PlacesContext } from '../../../contexts/PlacesContext';
+import { UserContext } from '../../../contexts/UserContext';
 
 // add a new tour place in database
 const AddTour = () => {
+    const { userIsAdmin } = useContext(UserContext);
     const { addTourPlace } = useContext(PlacesContext);
 
     // form refs
@@ -213,7 +215,8 @@ const AddTour = () => {
                             <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
                                 <button
                                     type="submit"
-                                    className="inline-flex justify-center py-2 px-8 border border-transparent shadow-sm font-bold rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                                    className={`inline-flex justify-center py-2 px-8 border border-transparent shadow-sm font-bold rounded-md text-white ${userIsAdmin ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500`}
+                                    disabled={!userIsAdmin}
                                 >
                                     Add Tour
                                 </button>

@@ -148,7 +148,7 @@ const ManageBookings = () => {
                                                         }
                                                         <button
                                                             onClick={() => handleDelete(booking._id)}
-                                                            className={`text-white my-1 py-1 px-3 rounded-md ${userIsAdmin ? 'bg-green-500' : 'bg-green-700'}`}
+                                                            className={`text-white my-1 py-1 px-3 rounded-md ${userIsAdmin ? 'bg-green-500' : 'bg-gray-400'}`}
                                                             disabled={!userIsAdmin}
                                                         >Delete</button>
 
