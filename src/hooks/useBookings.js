@@ -8,32 +8,32 @@ export default function useBookings() {
 
     const [allBookings, setAllBookings] = useState(null);
     function getAllBookings() {
-        axios.get(`https://travel-cruise-srt-server.herokuapp.com/bookings`)
+        axios.get(`https://travel-cruise.netlify.app/.netlify/functions/server/bookings`)
             .then(({ data }) => setAllBookings(data))
             .catch(console.dir);
     }
     useEffect(getAllBookings, []);
 
     function addBooking(bookingInfo) {
-        axios.post('https://travel-cruise-srt-server.herokuapp.com/bookings', bookingInfo)
+        axios.post('https://travel-cruise.netlify.app/.netlify/functions/server/bookings', bookingInfo)
             .then(history.push('/'))
             .catch(console.dir);
     }
 
     function deleteBooking(id) {
-        axios.delete(`https://travel-cruise-srt-server.herokuapp.com/bookings/${id}`)
+        axios.delete(`https://travel-cruise.netlify.app/.netlify/functions/server/bookings/${id}`)
             .then(({ data }) => data.deletedCount === 1 && getAllBookings())
             .catch(console.dir);
     }
 
     function setStatus(status, id) {
-        axios.post(`https://travel-cruise-srt-server.herokuapp.com/booking/update/${id}`, { status })
+        axios.post(`https://travel-cruise.netlify.app/.netlify/functions/server/booking/update/${id}`, { status })
             .then(({ data }) => data.modifiedCount === 1 && getAllBookings())
             .catch(console.dir);
     }
 
     function singleBookingDetails(id) {
-        return axios.get(`https://travel-cruise-srt-server.herokuapp.com/booking/${id}`)
+        return axios.get(`https://travel-cruise.netlify.app/.netlify/functions/server/booking/${id}`)
     }
 
 

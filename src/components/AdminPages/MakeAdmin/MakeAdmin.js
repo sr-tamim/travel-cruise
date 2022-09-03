@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const [status, setStatus] = useState(null)
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post('https://travel-cruise-srt-server.herokuapp.com/users', {
+        axios.post('https://travel-cruise.netlify.app/.netlify/functions/server/users', {
             email: emailRef.current.value, role: 'admin'
         }).then(({ data }) => data.matchedCount ? setStatus({ message: 'successful' }) : data.error && setStatus({ error: data.error }))
     }
