@@ -1,5 +1,4 @@
 // import necessary files, modules and components
-import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AboutPage from './components/AboutPage/AboutPage';
 import AddTour from './components/AdminPages/AddTour/AddTour';
@@ -25,7 +24,6 @@ import MakeAdmin from './components/AdminPages/MakeAdmin/MakeAdmin';
 
 
 function App() {
-
   return (
     <div className="App">
       {/* firebase user info context */}

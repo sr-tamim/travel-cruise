@@ -96,7 +96,7 @@ const ManageBookings = () => {
                                             <tr key={booking.email}>
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <div className="flex items-center">
-                                                        <div className="flex-shrink-0 h-10 w-10 bg-gray-700 rounded-full overflow-hidden flex items-center justify-center">
+                                                        <div className="shrink-0 h-10 w-10 bg-gray-700 rounded-full overflow-hidden flex items-center justify-center">
                                                             {booking.image ?
                                                                 <img className="w-full" src={booking.image} alt="" />
                                                                 : <UserIcon className="block h-7 w-7 text-white p-1" aria-hidden="true" />

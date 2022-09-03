@@ -9,7 +9,7 @@ const Bookings = ({ places, cart }) => {
 
     return (
         <div className="flex flex-col-reverse lg:flex-row">
-            <div className="flex-grow px-4 lg:pl-8 lg:pr-18">
+            <div className="grow px-4 lg:pl-8 lg:pr-18">
                 <SingleBooking places={places} cart={cart} />
             </div>
             <div className="p-8">
