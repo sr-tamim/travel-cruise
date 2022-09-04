@@ -13,7 +13,7 @@ const PlaceDetails = () => {
     const { placeID } = useParams();
     const [placeDetails, setPlaceDetails] = useState(null);
     useEffect(() => {
-        axios.get(`https://travel-cruise.netlify.app/.netlify/functions/server/place/${placeID}`)
+        axios.get(`https://travel-cruise-server.netlify.app/.netlify/functions/server/place/${placeID}`)
             .then(({ data }) => setPlaceDetails(data))
             .catch(console.dir)
     }, [placeID])

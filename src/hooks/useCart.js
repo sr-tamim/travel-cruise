@@ -13,7 +13,7 @@ export default function useCart() {
         else {
             const savedDB = JSON.parse(dbJSON);
             const productIDs = Object.keys(savedDB).map(id => parseInt(id));
-            const result = await axios.post('https://travel-cruise.netlify.app/.netlify/functions/server/placesByID', productIDs);
+            const result = await axios.post('https://travel-cruise-server.netlify.app/.netlify/functions/server/placesByID', productIDs);
             const { data } = result;
             // add products depending on the number of savedDB
             const cartItems = [];

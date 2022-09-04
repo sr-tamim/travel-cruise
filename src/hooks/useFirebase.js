@@ -35,7 +35,7 @@ const useFirebase = () => {
 
     // save user info in database
     function saveUserToDB({ email }) {
-        axios.post('https://travel-cruise.netlify.app/.netlify/functions/server/users', { email, role: 'public' })
+        axios.post('https://travel-cruise-server.netlify.app/.netlify/functions/server/users', { email, role: 'public' })
             .catch(err => console.log(err))
     }
 
@@ -69,7 +69,7 @@ const useFirebase = () => {
             .finally(() => setAuthLoading(false))
     }
     function checkAdmin(email) {
-        axios.post('https://travel-cruise.netlify.app/.netlify/functions/server/isAdmin', { email })
+        axios.post('https://travel-cruise-server.netlify.app/.netlify/functions/server/isAdmin', { email })
             .then(({ data }) => setUserIsAdmin(data))
             .catch(err => console.log(err))
     }

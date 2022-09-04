@@ -8,7 +8,7 @@ const SubscribeSection = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const dateTime = Date.now();
-        axios.post('https://travel-cruise.netlify.app/.netlify/functions/server/subscription', {
+        axios.post('https://travel-cruise-server.netlify.app/.netlify/functions/server/subscription', {
             subscriptionInfo: { email, dateTime }
         }).then(({ data }) => data.insertedId && alert('Thanks For Your Subscription'));
         event.target.reset();

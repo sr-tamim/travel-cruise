@@ -10,7 +10,7 @@ const Subscribers = () => {
 
     // get subscribers from database
     useEffect(() => {
-        axios.get('https://travel-cruise.netlify.app/.netlify/functions/server/subscribers')
+        axios.get('https://travel-cruise-server.netlify.app/.netlify/functions/server/subscribers')
             .then(({ data }) => {
                 const modifiedData = [];
                 data.forEach(d => {
