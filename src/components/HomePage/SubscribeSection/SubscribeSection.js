@@ -37,7 +37,7 @@ const SubscribeSection = () => {
                         />
                         <button
                             type="submit"
-                            className="w-full sm:w-auto py-2 px-6 border border-transparent font-bold rounded-md text-white bg-green-600 hover:bg-green-500"
+                            className="w-full sm:w-auto py-2 px-6 border border-transparent font-bold rounded-md text-white bg-green-600 hover:bg-green-700"
                         >
                             Submit
                         </button>

@@ -32,26 +32,28 @@ function App() {
         <BookingsContextProvider>
           <Router>
             <Navbar />
-            <Switch>
-              <Route exact path="/"><HomePage /></Route>
-              <Route path="/home"><HomePage /></Route>
-              <Route path="/tours"><Places /></Route>
-              <Route path="/about"><AboutPage /></Route>
-              <Route path="/authentication"><AuthenticationPages /></Route>
+            <main className='pt-24'>
+              <Switch>
+                <Route exact path="/"><HomePage /></Route>
+                <Route path="/home"><HomePage /></Route>
+                <Route path="/tours"><Places /></Route>
+                <Route path="/about"><AboutPage /></Route>
+                <Route path="/authentication"><AuthenticationPages /></Route>
 
-              {/* private routes */}
-              <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
-              <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
-              <PrivateRoute path="/profile"><Profile /></PrivateRoute>
-              <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
-              <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
-              <PrivateRoute path="/makeadmin"><MakeAdmin /></PrivateRoute>
+                {/* private routes */}
+                <PrivateRoute path="/contact"><ContactPage /></PrivateRoute>
+                <PrivateRoute path="/places/:placeID"><PlaceDetails /></PrivateRoute>
+                <PrivateRoute path="/profile"><Profile /></PrivateRoute>
+                <PrivateRoute path="/mybookings"><MyBookings /></PrivateRoute>
+                <PrivateRoute path="/subscribers"><Subscribers /></PrivateRoute>
+                <PrivateRoute path="/makeadmin"><MakeAdmin /></PrivateRoute>
 
-              <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
-              <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>
-              <PrivateRoute path="/booking/confirm"><ConfirmBooking /></PrivateRoute>
-              <PrivateRoute path="/addtour"><AddTour /></PrivateRoute>
-            </Switch>
+                <PrivateRoute path="/manage/bookings"><ManageBookings /></PrivateRoute>
+                <PrivateRoute path="/manage/booking/:id"><DetailedBooking /></PrivateRoute>
+                <PrivateRoute path="/booking/confirm"><ConfirmBooking /></PrivateRoute>
+                <PrivateRoute path="/addtour"><AddTour /></PrivateRoute>
+              </Switch>
+            </main>
             <Footer /> {/* footer */}
           </Router>
         </BookingsContextProvider>

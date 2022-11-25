@@ -13,7 +13,7 @@ const Places = () => {
                     travel read only one page.</q>
                 {" "}― Augustine of Hippo
             </h5>
-            <div className="container flex flex-wrap mx-auto"
+            <div className="container flex flex-wrap justify-center items-center gap-x-8 gap-y-12 mx-auto"
             >{places &&
                 places.map(place => <Place key={place.placeID} place={place} />)
                 }</div>

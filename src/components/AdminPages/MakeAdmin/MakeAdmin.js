@@ -47,7 +47,7 @@ const MakeAdmin = () => {
                             <button
                                 type="submit"
                                 className={`py-2 px-6 border border-transparent shadow-sm font-bold rounded-md text-white ${userIsAdmin ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500`}
-                                disabled={!userIsAdmin}
+                                disabled={!userIsAdmin} title={userIsAdmin ? '' : 'Delete button is only available for real admins'}
                             >
                                 Make Admin
                             </button>

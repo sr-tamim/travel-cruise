@@ -139,17 +139,18 @@ const ManageBookings = () => {
                                                         {booking.status !== 'Approved' ?
                                                             <button
                                                                 onClick={() => setStatus('Approved', booking._id)}
-                                                                className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
+                                                                className="text-white bg-green-600 hover:bg-green-700 my-1 py-1 px-3 rounded-md"
                                                             >Approve</button>
                                                             : <button
                                                                 onClick={() => setStatus('Pending', booking._id)}
-                                                                className="text-white bg-green-500 my-1 py-1 px-3 rounded-md"
+                                                                className="text-white bg-green-600 hover:bg-green-700 my-1 py-1 px-3 rounded-md"
                                                             >Refuse</button>
                                                         }
                                                         <button
                                                             onClick={() => handleDelete(booking._id)}
-                                                            className={`text-white my-1 py-1 px-3 rounded-md ${userIsAdmin ? 'bg-green-500' : 'bg-gray-400'}`}
+                                                            className={`text-white my-1 py-1 px-3 rounded-md ${userIsAdmin ? 'bg-green-600' : 'bg-gray-400'}`}
                                                             disabled={!userIsAdmin}
+                                                            title={userIsAdmin ? '' : 'Delete button is only available for real admins'}
                                                         >Delete</button>
 
                                                         <DeleteModal state={{ openModal, setOpenModal }}

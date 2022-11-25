@@ -46,14 +46,14 @@ const SingleBooking = ({ places, cart }) => {
                     >Quantity:
                         {cart && <MinusIcon
                             onClick={() => handleQuantity('minus', place)}
-                            className="inline h-6 w-6 text-white bg-green-500 p-1 mx-2 cursor-pointer
+                            className="inline h-6 w-6 text-white bg-green-600 p-1 mx-2 cursor-pointer
                                             shadow-md rounded" aria-hidden="true" />
                         }
                         {items.filter(p => p.placeID === place.placeID).length}
 
                         {cart && <PlusIcon
                             onClick={() => handleQuantity('plus', place)}
-                            className="inline h-6 w-6 text-white bg-green-500 p-1 mx-2 cursor-pointer
+                            className="inline h-6 w-6 text-white bg-green-600 p-1 mx-2 cursor-pointer
                                             shadow-md rounded" aria-hidden="true" />
                         }
                     </h6>
