@@ -29,7 +29,7 @@ const SignUp = () => {
                         <div className="px-4 py-5 bg-white sm:p-6">
                             <div className="grid grid-cols-6 gap-6">
                                 <div className="col-span-6">
-                                    <label htmlFor="full-name" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="full-name" className="block text-sm font-semibold text-gray-700">
                                         Full Name
                                     </label>
                                     <input
@@ -43,7 +43,7 @@ const SignUp = () => {
                                     />
                                 </div>
                                 <div className="col-span-6">
-                                    <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="email-address" className="block text-sm font-semibold text-gray-700">
                                         Email address
                                     </label>
                                     <input
@@ -57,7 +57,7 @@ const SignUp = () => {
                                     />
                                 </div>
                                 <div className="col-span-6">
-                                    <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
                                         Password
                                     </label>
                                     <input
@@ -74,7 +74,7 @@ const SignUp = () => {
                         </div>
                         <div className="flex items-center justify-end flex-wrap px-4 py-4 bg-gray-50 sm:px-6">
                             {usrError && <div
-                                className="text-red-500 text-lg capitalize font-medium mx-8">
+                                className="text-red-500 text-lg capitalize font-semibold mx-8">
                                 {usrError}</div>
                             }
                             {authLoading && <LoadingSpinner className="mx-8" width="w-10" height="h-10" />}
@@ -90,7 +90,7 @@ const SignUp = () => {
             </div>
             <div className="text-center">
                 Already have account? <NavLink to="/authentication/login"
-                    className="text-green-600 font-medium hover:underline"
+                    className="text-green-600 font-semibold hover:underline"
                 >Login</NavLink>
             </div>
         </div>

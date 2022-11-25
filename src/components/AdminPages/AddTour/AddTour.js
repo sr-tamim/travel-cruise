@@ -50,7 +50,7 @@ const AddTour = () => {
                             <div className="px-4 py-5 bg-white sm:p-6">
                                 <div className="grid grid-cols-6 gap-6">
                                     <div className="col-span-6 md:col-span-4">
-                                        <label htmlFor="tour-name" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-name" className="block text-sm font-semibold text-gray-700">
                                             Tour Name
                                         </label>
                                         <input
@@ -64,7 +64,7 @@ const AddTour = () => {
                                     </div>
 
                                     <div className="col-span-3 md:col-span-2">
-                                        <label htmlFor="tour-duration" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-duration" className="block text-sm font-semibold text-gray-700">
                                             Tour Duration <small>(days)</small>
                                         </label>
                                         <input
@@ -77,7 +77,7 @@ const AddTour = () => {
                                         />
                                     </div>
                                     <div className="col-span-3 md:col-span-2">
-                                        <label htmlFor="tour-cost" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-cost" className="block text-sm font-semibold text-gray-700">
                                             Tour Cost <small>$</small>
                                         </label>
                                         <input
@@ -91,7 +91,7 @@ const AddTour = () => {
                                     </div>
 
                                     <div className="col-span-6 md:col-span-2">
-                                        <label htmlFor="tour-country" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-country" className="block text-sm font-semibold text-gray-700">
                                             Tour Country
                                         </label>
                                         <input
@@ -104,7 +104,7 @@ const AddTour = () => {
                                         />
                                     </div>
                                     <div className="col-span-6 md:col-span-2">
-                                        <label htmlFor="tour-city" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-city" className="block text-sm font-semibold text-gray-700">
                                             Tour City
                                         </label>
                                         <input
@@ -118,7 +118,7 @@ const AddTour = () => {
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3 xl:col-span-1">
-                                        <label htmlFor="tour-capital" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-capital" className="block text-sm font-semibold text-gray-700">
                                             Tour Country Capital City
                                         </label>
                                         <input
@@ -133,7 +133,7 @@ const AddTour = () => {
 
 
                                     <div className="col-span-6 sm:col-span-3 xl:col-span-1">
-                                        <label htmlFor="tour-currency" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-currency" className="block text-sm font-semibold text-gray-700">
                                             Tour Country Currency
                                         </label>
                                         <input
@@ -146,7 +146,7 @@ const AddTour = () => {
                                         />
                                     </div>
                                     <div className="col-span-6 sm:col-span-6 xl:col-span-4">
-                                        <label htmlFor="tour-photoURL" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-photoURL" className="block text-sm font-semibold text-gray-700">
                                             Tour Cover Photo URL
                                         </label>
                                         <input
@@ -159,7 +159,7 @@ const AddTour = () => {
                                         />
                                     </div>
                                     <div className="col-span-6 lg:col-span-3">
-                                        <label htmlFor="tour-languages" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-languages" className="block text-sm font-semibold text-gray-700">
                                             Tour Country Languages <small>(multiple features separated by comma)</small>
                                         </label>
                                         <input
@@ -172,7 +172,7 @@ const AddTour = () => {
                                         />
                                     </div>
                                     <div className="col-span-6 lg:col-span-3">
-                                        <label htmlFor="tour-features" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-features" className="block text-sm font-semibold text-gray-700">
                                             Included features <small>(multiple features separated by comma)</small>
                                         </label>
                                         <input
@@ -186,7 +186,7 @@ const AddTour = () => {
                                     </div>
 
                                     <div className="col-span-6 sm:col-span-3">
-                                        <label htmlFor="tour-short-desc" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-short-desc" className="block text-sm font-semibold text-gray-700">
                                             Short Description
                                         </label>
                                         <textarea
@@ -198,7 +198,7 @@ const AddTour = () => {
                                         ></textarea>
                                     </div>
                                     <div className="col-span-6 sm:col-span-3">
-                                        <label htmlFor="tour-description" className="block text-sm font-medium text-gray-700">
+                                        <label htmlFor="tour-description" className="block text-sm font-semibold text-gray-700">
                                             Long Description
                                         </label>
                                         <textarea

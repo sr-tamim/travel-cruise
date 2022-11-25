@@ -26,7 +26,7 @@ const ContactPage = () => {
                         <div className="px-4 py-5 bg-white sm:p-6">
                             <div className="grid grid-cols-6 gap-6">
                                 <div className="col-span-6">
-                                    <label htmlFor="full-name" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="full-name" className="block text-sm font-semibold text-gray-700">
                                         Name
                                     </label>
                                     <input
@@ -42,7 +42,7 @@ const ContactPage = () => {
                                 </div>
 
                                 <div className="col-span-6">
-                                    <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="email-address" className="block text-sm font-semibold text-gray-700">
                                         Email address
                                     </label>
                                     <input
@@ -58,7 +58,7 @@ const ContactPage = () => {
                                 </div>
 
                                 <div className="col-span-6">
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
                                         Message
                                     </label>
                                     <textarea

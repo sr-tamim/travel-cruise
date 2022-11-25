@@ -29,7 +29,7 @@ const Login = () => {
                         <div className="px-4 py-5 bg-white sm:p-6">
                             <div className="grid grid-cols-6 gap-6">
                                 <div className="col-span-6">
-                                    <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="email-address" className="block text-sm font-semibold text-gray-700">
                                         Email address
                                     </label>
                                     <input
@@ -43,7 +43,7 @@ const Login = () => {
                                     />
                                 </div>
                                 <div className="col-span-6">
-                                    <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
                                         Password
                                     </label>
                                     <input
@@ -60,7 +60,7 @@ const Login = () => {
                         </div>
                         <div className="flex items-center justify-end flex-wrap px-4 py-4 bg-gray-50 sm:px-6">
                             {usrError && <div
-                                className="text-red-500 text-lg capitalize font-medium mx-8">
+                                className="text-red-500 text-lg capitalize font-semibold mx-8">
                                 {usrError}</div>
                             }
                             {authLoading && <LoadingSpinner className="mx-8" width="w-10" height="h-10" />}
@@ -76,7 +76,7 @@ const Login = () => {
             </div>
             <div className="text-center">
                 Don't have account? <NavLink to="/authentication/register"
-                    className="text-green-600 font-medium hover:underline"
+                    className="text-green-600 font-semibold hover:underline"
                 >Register</NavLink>
             </div>
         </div>

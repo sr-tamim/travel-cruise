@@ -36,13 +36,13 @@ const Subscribers = () => {
                                         <tr>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
                                             >
                                                 Email
                                             </th>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
                                             >
                                                 Time
                                             </th>
@@ -57,7 +57,7 @@ const Subscribers = () => {
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <div className="flex items-center">
                                                         <div className="ml-4">
-                                                            <div className="text-sm font-medium text-gray-900">{subscriber.name}</div>
+                                                            <div className="text-sm font-semibold text-gray-900">{subscriber.name}</div>
                                                             <div className="text-sm text-gray-500">{subscriber.email}</div>
                                                         </div>
                                                     </div>

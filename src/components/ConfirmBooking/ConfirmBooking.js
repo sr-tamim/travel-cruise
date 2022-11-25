@@ -45,7 +45,7 @@ const ConfirmBooking = () => {
                                 <div className="px-4 py-5 bg-white sm:p-6">
                                     <div className="grid grid-cols-6 gap-6">
                                         <div className="col-span-6 sm:col-span-4">
-                                            <label htmlFor="full-name" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="full-name" className="block text-sm font-semibold text-gray-700">
                                                 Name
                                             </label>
                                             <input
@@ -62,7 +62,7 @@ const ConfirmBooking = () => {
 
 
                                         <div className="col-span-6 sm:col-span-3">
-                                            <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="email-address" className="block text-sm font-semibold text-gray-700">
                                                 Email address
                                             </label>
                                             <input
@@ -78,7 +78,7 @@ const ConfirmBooking = () => {
                                         </div>
 
                                         <div className="col-span-6 sm:col-span-3">
-                                            <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="country" className="block text-sm font-semibold text-gray-700">
                                                 Country
                                             </label>
                                             <input
@@ -93,7 +93,7 @@ const ConfirmBooking = () => {
                                         </div>
 
                                         <div className="col-span-6">
-                                            <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="street-address" className="block text-sm font-semibold text-gray-700">
                                                 Street address
                                             </label>
                                             <input
@@ -106,7 +106,7 @@ const ConfirmBooking = () => {
                                         </div>
 
                                         <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                                            <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="city" className="block text-sm font-semibold text-gray-700">
                                                 City
                                             </label>
                                             <input
@@ -121,7 +121,7 @@ const ConfirmBooking = () => {
                                         </div>
 
                                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                            <label htmlFor="region" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="region" className="block text-sm font-semibold text-gray-700">
                                                 State / Province
                                             </label>
                                             <input
@@ -134,7 +134,7 @@ const ConfirmBooking = () => {
                                         </div>
 
                                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                            <label htmlFor="postal-code" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="postal-code" className="block text-sm font-semibold text-gray-700">
                                                 ZIP / Postal code
                                             </label>
                                             <input
@@ -146,7 +146,7 @@ const ConfirmBooking = () => {
                                             />
                                         </div>
                                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                            <label htmlFor="cc-number" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="cc-number" className="block text-sm font-semibold text-gray-700">
                                                 Credit Card Number
                                             </label>
                                             <input
@@ -158,7 +158,7 @@ const ConfirmBooking = () => {
                                             />
                                         </div>
                                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                            <label htmlFor="cc-exp" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="cc-exp" className="block text-sm font-semibold text-gray-700">
                                                 Expiry Date
                                             </label>
                                             <input
@@ -170,7 +170,7 @@ const ConfirmBooking = () => {
                                             />
                                         </div>
                                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                                            <label htmlFor="cc-csc" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="cc-csc" className="block text-sm font-semibold text-gray-700">
                                                 CVC
                                             </label>
                                             <input

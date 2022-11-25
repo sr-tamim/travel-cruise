@@ -36,14 +36,14 @@ const AuthenticationPages = () => {
                         <div className="flex flex-col justify-center items-center py-8 sm:flex-row">
                             <NavLink to={`${url}/login`}>
                                 <button
-                                    className="border border-transparent shadow-sm font-medium rounded-md text-white bg-green-600 py-2 px-6  m-4 hover:bg-green-700">
+                                    className="border border-transparent shadow-sm font-semibold rounded-md text-white bg-green-600 py-2 px-6  m-4 hover:bg-green-700">
                                     Login using Email
                                 </button>
                             </NavLink>
                             or
                             <NavLink to={`/authentication/register`}>
                                 <button
-                                    className="border border-transparent shadow-sm font-medium rounded-md text-white bg-green-600 py-2 px-6  m-4 hover:bg-green-700">
+                                    className="border border-transparent shadow-sm font-semibold rounded-md text-white bg-green-600 py-2 px-6  m-4 hover:bg-green-700">
                                     Register using Email
                                 </button>
                             </NavLink>
@@ -59,11 +59,11 @@ const AuthenticationPages = () => {
                 </Switch>
                 <div className="flex flex-col items-center my-12">
                     <button onClick={googleLogin}
-                        className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:text-md">
+                        className="px-8 py-3 border border-transparent text-base font-semibold rounded-md text-white bg-green-600 hover:bg-green-700 md:text-md">
                         Login with Google
                     </button>
                     <button onClick={() => loginEmail('demo@srt.com', '123456')}
-                        className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 mt-20 hover:bg-green-700 md:text-md">
+                        className="px-8 py-3 border border-transparent text-base font-semibold rounded-md text-white bg-green-600 mt-20 hover:bg-green-700 md:text-md">
                         Skip Login
                     </button>
                 </div>

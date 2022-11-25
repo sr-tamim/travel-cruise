@@ -21,7 +21,7 @@ const MakeAdmin = () => {
                         <div className="px-4 py-5 bg-white sm:p-6">
                             <div className="grid grid-cols-6 gap-6">
                                 <div className="col-span-6">
-                                    <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                                    <label htmlFor="email-address" className="block text-sm font-semibold text-gray-700">
                                         Email address
                                     </label>
                                     <input
@@ -38,11 +38,11 @@ const MakeAdmin = () => {
                         </div>
                         <div className="flex items-center justify-end flex-wrap px-4 py-4 bg-gray-50 sm:px-6">
                             {status && <div
-                                className="text-red-500 text-lg capitalize font-medium">
+                                className="text-red-500 text-lg capitalize font-semibold">
                                 {status?.error}</div>
                             }
                             {status && <div
-                                className="text-green-500 text-lg capitalize font-medium mx-8">
+                                className="text-green-500 text-lg capitalize font-semibold mx-8">
                                 {status?.message}</div>}
                             <button
                                 type="submit"

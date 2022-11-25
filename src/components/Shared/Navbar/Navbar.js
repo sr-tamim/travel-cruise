@@ -75,7 +75,7 @@ export default function Navbar() {
                                                 key={item.name}
                                                 to={item.href}
                                                 activeClassName='text-green-600 font-bold'
-                                                className={classNames('text-black hover:bg-green-100 md:px-3 pt-2 pb-1 rounded-md text-base')}
+                                                className={classNames('hover:bg-green-100 md:px-3 pt-2 pb-1 rounded-md text-base')}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
                                                 {item.name}
@@ -88,8 +88,8 @@ export default function Navbar() {
                                                 <>
                                                     <Popover.Button
                                                         className={classNames(
-                                                            open ? 'text-green-600 font-bold' : 'text-black',
-                                                            'group rounded-md inline-flex items-center text-base font-medium hover:bg-green-100 md:px-3 pt-2 pb-1 z-50'
+                                                            open ? 'text-green-600' : 'text-black',
+                                                            'group rounded-md inline-flex items-center text-base hover:bg-green-100 md:px-3 pt-2 pb-1 z-50'
                                                         )}
                                                     >
                                                         <span>Admin Actions</span>
@@ -121,7 +121,7 @@ export default function Navbar() {
                                                                             className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                                                         >
                                                                             <div className="ml-4">
-                                                                                <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                                                                <p className="text-base font-semibold text-gray-900">{item.name}</p>
                                                                             </div>
                                                                         </NavLink>
                                                                     ))}
@@ -142,7 +142,7 @@ export default function Navbar() {
                                     <button>
                                         <NavLink
                                             to="/authentication"
-                                            className="px-4 py-1 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-1 md:text-lg md:px-6 md:py-2"
+                                            className="px-4 py-1 border border-transparent text-sm font-semibold rounded-md text-white bg-green-600 hover:bg-green-700 md:py-1 md:text-lg md:px-6 md:py-2"
                                         >
                                             Login
                                         </NavLink>
@@ -235,7 +235,7 @@ export default function Navbar() {
                                         <Popover.Button
                                             className={classNames(
                                                 open ? 'text-green-600 font-bold' : 'text-black',
-                                                'group rounded-md inline-flex items-center text-base font-medium hover:bg-green-100 px-3 py-2 z-50'
+                                                'group rounded-md inline-flex items-center text-base font-semibold hover:bg-green-100 px-3 py-2 z-50'
                                             )}
                                         >
                                             <span>Admin Actions</span>
@@ -267,7 +267,7 @@ export default function Navbar() {
                                                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                                             >
                                                                 <Disclosure.Button className="ml-4">
-                                                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                                                    <p className="text-base font-semibold text-gray-900">{item.name}</p>
                                                                 </Disclosure.Button>
                                                             </NavLink>
                                                         ))}
