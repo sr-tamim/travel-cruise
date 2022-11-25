@@ -2,10 +2,6 @@ import React from 'react';
 import { ClockIcon } from '@heroicons/react/outline';
 import { NavLink } from 'react-router-dom';
 
-const buttonStyle = {
-    background: 'linear-gradient(to right, #1B77BA, #8BC547)'
-}
-
 
 // single tour place container for all tour places section
 const Place = ({ place }) => {
@@ -13,12 +9,12 @@ const Place = ({ place }) => {
         shortDescription, cost } = place;
     return (
         <div className="w-full md:w-1/2 lg:w-1/3 px-5 my-8">
-            <div className="shadow-lg hover:shadow-2xl rounded-xl
+            <div className="group shadow-lg hover:shadow-2xl rounded-xl
             transform hover:-translate-y-4
             transition duration-500 p-6">
-                <div className="h-56 w-full overflow-hidden relative">
-                    <img className="min-h-full object-cover rounded-t-xl
-                transform hover:scale-125 transition-transform duration-500"
+                <div className="h-56 w-full overflow-hidden relative rounded-t-xl">
+                    <img className="min-h-full object-cover
+                transform group-hover:scale-110 transition-transform duration-500"
                         src={placePHOTO} alt={placeName} />
                     <h6 className="absolute bottom-0 right-4 bg-green-700 bg-opacity-60
                     text-white font-extrabold px-6 py-2 rounded-t">
@@ -35,8 +31,7 @@ const Place = ({ place }) => {
                     <p className="text-gray-500 text-xs xl:text-sm my-4">
                         {shortDescription}</p>
                     <NavLink to={`/places/${placeID}`}>
-                        <button className="w-full text-white text-lg font-bold py-2"
-                            style={buttonStyle}>See Details</button>
+                        <button className="bg-green-600 hover:bg-green-700 w-full text-white text-lg font-bold py-2 rounded">See Details</button>
                     </NavLink>
                 </div>
             </div>

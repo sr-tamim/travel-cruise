@@ -66,7 +66,7 @@ const ContactPage = () => {
                                         id="message"
                                         ref={formInputs.message}
                                         placeholder="type message here"
-                                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                        className="mt-1 min-h-[8rem] focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                     ></textarea>
                                 </div>
                             </div>

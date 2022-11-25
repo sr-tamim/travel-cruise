@@ -96,7 +96,7 @@ const Footer = () => {
                                     rel="noreferrer" target="_blank">
                                     <img src="/images/facebook.svg" className="w-full h-full" alt="" />
                                 </a>
-                                <a href="https://twitter.com/TaMiM__tamim"
+                                <a href="https://twitter.com/sr__tamim"
                                     className="w-10 h-10 rounded-full text-center p-2 hover:bg-green-200"
                                     rel="noreferrer" target="_blank">
                                     <img src="/images/twitter.svg" className="w-full h-full" alt="" />

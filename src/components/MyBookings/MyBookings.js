@@ -16,10 +16,10 @@ const MyBookings = () => {
                 <div className="mx-auto lg:mt-16 lg:mx-8">
 
                     <button onClick={() => setOpenModal(true)}
-                        className="bg-green-700 text-white text-sm rounded-md px-6 py-3 mr-4">Empty Cart</button>
+                        className="bg-green-600 hover:bg-green-700 text-white text-sm rounded-md px-6 py-3 mr-4">Empty Cart</button>
 
                     <NavLink to="/booking/confirm">
-                        <button className="bg-green-700 text-white text-sm rounded-md px-6 py-3">Confirm Bookings</button>
+                        <button className="bg-green-600 hover:bg-green-700 text-white text-sm rounded-md px-6 py-3">Confirm Bookings</button>
                     </NavLink>
                 </div>
             </div>
